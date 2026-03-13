@@ -1,504 +1,526 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Portfolio — Ly Da Bui (DA/BA/PO)</title>
-
-    <!-- Fonts & Icons -->
+    <title>Ly Da Bui — Product · BA · Data</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
           rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="modal.css"/>
 </head>
 <body>
-<!-- Dynamic Gradient Background -->
-<div class="animated-bg" aria-hidden="true"></div>
 
-<!-- Header -->
-<header class="header" id="header">
-    <div class="container">
-        <div class="header-content">
-            <a class="logo" href="#">
-                <strong class="logo-name">Ly Da Bui</strong>
-                <span class="logo-role">Data Analyst · Business Analyst · Product Owner</span>
-            </a>
-            <nav aria-label="Primary">
-                <ul class="nav-menu">
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
+<div class="glow2" aria-hidden="true"></div>
 
-<!-- Hero -->
+<!-- NAV -->
+<nav id="nav">
+    <a class="nav-logo" href="#home"><span>./</span>lybuida</a>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-resume" href="assets/docs/resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+</nav>
+
+<!-- HERO -->
 <section class="hero" id="home">
     <div class="container">
-        <div class="hero-content">
-            <div class="hero-text reveal">
-                <h1 class="headline">
-                    Turning <span class="grad-text">Data</span> Into <br/>Actionable Insights
-                </h1>
-                <p class="subhead">
-                    Final-year MIS student focusing on Business Analysis, Data Visualization, and Process Optimization
-                    using <strong>Power BI</strong>, <strong>SQL</strong> and <strong>Python</strong>.
+        <div class="hero-inner">
+            <div>
+                <div class="hero-meta reveal">Product Owner → Business Analyst → Data</div>
+                <h1 class="hero-name reveal">
+    <span class="typing-line line-1" id="line1"></span><br>
+    <span class="typing-line outline" id="line2"></span><br>
+    <span class="typing-line line-3" id="line3"></span>
+</h1>
+                <div class="hero-title-line reveal">MIS · Final Year · Ho Chi Minh City</div>
+                <p class="hero-desc reveal">
+                    Final-year <strong>Management Information Systems</strong> student with 5 months of real
+                    product ownership across 3 SaaS products. I bridge <strong>user needs, system logic,
+                    and business goals</strong> — from PRDs and user stories to SQL dashboards.
                 </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fa-regular fa-compass"></i> Explore My Projects
-                    </a>
-                    <a href="#contact" class="btn btn-secondary"><i class="fa-regular fa-paper-plane"></i> Get in Touch</a>
+                <div class="hero-actions reveal">
+                    <a class="btn-primary" href="#projects"><i class="fa-solid fa-arrow-right"></i> View Work</a>
+                    <a class="btn-ghost" href="#contact">Get in Touch</a>
                 </div>
             </div>
-            <aside class="about-side reveal">
-                <div class="glass hero-card tilt">
-                    <div class="hero-avatar">
-                        <img src="assets/img/lybui.jpg" alt="Ly Da Bui portrait">
-                    </div>
-                    <h3 class="hero-name">Ly Da Bui</h3>
-                    <p class="hero-role">DA/BA/PO</p>
 
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <div class="stat-number">3.45/4</div>
-                            <div class="stat-label">GPA</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">4</div>
-                            <div class="stat-label">Scholarships</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">2</div>
-                            <div class="stat-label">Certifications</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">10</div>
-                            <div class="stat-label">Projects</div>
-                        </div>
-                    </div>
+            <aside class="reveal">
+                <div class="hero-portrait-wrap">
+                    <img src="assets/img/avar5.png" alt="Ly Da Bui portrait" class="hero-portrait"/>
                 </div>
             </aside>
-
         </div>
     </div>
 </section>
 
-<!-- ABOUT (theme: light) -->
-<section class="section theme-light" id="about">
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
     <div class="container">
-        <header class="section-header reveal">
-            <h2 class="section-title">Hi, I’m Ly Da Bui</h2>
-        </header>
+        <div class="sec-header reveal">
+            <div class="sec-eyebrow">About</div>
+            <h2 class="sec-title">PRODUCT-MINDED.<br><span class="sec-title-dim">DATA-AWARE.</span></h2>
+            <p class="sec-sub">Building digital solutions that are clear in logic, useful for users, and aligned with business goals.</p>
+        </div>
 
         <div class="about-grid">
-            <div class="about-main reveal">
+            <!-- LEFT: Bio + Pillars -->
+            <div class="about-body reveal">
                 <p>
-                    I am a final-year Management Information Systems student
-                    passionate about <span class="grad-text">Data Analytics</span> and
-                    <span class="grad-text">Business Analysis</span>. To me, data is not just numbers — it is the story
-                    behind every challenge and every opportunity for smarter decisions.
+                    I'm a final-year <strong>Management Information Systems</strong> student who spent 5 months as a
+                    Product Owner Intern at <strong>Golden Owl Solutions</strong> — working across 3 SaaS products in
+                    an Agile team with developers, designers, QA, and stakeholders.
                 </p>
                 <p>
-                    With solid skills, academic excellence,
-                    and a proactive spirit, I am eager to help organizations
-                    leverage data and technology to <span class="grad-text">drive growth and create impact</span>.
+                    My edge is <strong>connecting the dots</strong>: translating messy requirements into clear user
+                    stories, designing workflows engineers can act on, and using data to validate decisions — not just report them.
                 </p>
+            </div>
 
-                <!-- About: cards for Honors & Certifications -->
-                <div class="about-cards">
-                    <article class="about-card white-card">
-                        <h4><i class="fa-solid fa-trophy"></i> Honors</h4>
-                        <ul class="about-list">
-                            <li>3 semesters — Excellent Scholarship</li>
-                            <li>1 semester — Outstanding Scholarship</li>
-                        </ul>
-                    </article>
+            <!-- RIGHT: Info blocks + Stats -->
+            <div class="about-side reveal">
+                <div class="ab-stats">
+                    <div class="ab-stat"><div class="ab-stat-n">3.6</div><div class="ab-stat-l">GPA / 4.0</div></div>
+                    <div class="ab-stat"><div class="ab-stat-n">6</div><div class="ab-stat-l">Scholarships</div></div>
+                    <div class="ab-stat"><div class="ab-stat-n">3</div><div class="ab-stat-l">Products</div></div>
+                    <div class="ab-stat"><div class="ab-stat-n">10+</div><div class="ab-stat-l">Projects</div></div>
+                </div>
 
-                    <article class="about-card white-card">
-                        <h4><i class="fa-solid fa-certificate"></i> Certifications</h4>
-                        <ul class="about-list">
-                            <li>Big Data Course — Samsung Innovation Campus</li>
-                            <li>Master Analytical Thinking &amp; Data Analytics with Power BI</li>
-                        </ul>
-                    </article>
+                <div class="info-block info-block--purple">
+                    <div class="info-block-label">Certifications</div>
+                    <ul>
+                        <li>Big Data — Samsung Innovation Campus</li>
+                        <li>Analytical Thinking & Power BI for Data Analytics</li>
+                        <li>TOEIC 670</li>
+                    </ul>
+                </div>
+
+                <div class="info-block info-block--green">
+                    <div class="info-block-label">Core Stack</div>
+                    <ul>
+                        <li>Jira · Confluence · Figma</li>
+                        <li>Power BI · DAX · SQL · Python</li>
+                        <li>BPMN · UML · ERD · DFD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <div class="container">
+        <div class="sec-header reveal">
+            <div class="sec-eyebrow">Experience</div>
+            <h2 class="sec-title">PRODUCT<br>OWNERSHIP.</h2>
+        </div>
+
+        <div class="exp-block reveal">
+            <div class="exp-block-top">
+                <div>
+                    <div class="exp-role">Product Owner Intern</div>
+                    <div class="exp-company">Golden Owl Solutions · 3 SaaS Products · Agile</div>
+                </div>
+                <span class="exp-period">~5 Months</span>
+            </div>
+            <div class="exp-bullets">
+                <div class="exp-bullet">Contributed to product development across 3 SaaS products — supporting
+                    requirement gathering, workflow design, and sprint delivery from backlog to release.
+                </div>
+                <div class="exp-bullet">Wrote and refined product documentation: user stories, acceptance criteria,
+                    PRDs, and process flows that kept dev and design aligned.
+                </div>
+                <div class="exp-bullet">Collaborated daily with developers, designers, QA, and stakeholders to clarify
+                    requirements and resolve blockers fast.
+                </div>
+                <div class="exp-bullet">Supported product decisions through user research, competitive analysis,
+                    wireframing (Figma), and data-informed thinking.
+                </div>
+            </div>
+            <div class="exp-tags">
+                <span class="exp-tag">Agile / Scrum</span>
+                <span class="exp-tag">User Stories</span>
+                <span class="exp-tag">Acceptance Criteria</span>
+                <span class="exp-tag">PRD Writing</span>
+                <span class="exp-tag">Workflow Design</span>
+                <span class="exp-tag">Wireframing</span>
+                <span class="exp-tag">Jira</span>
+                <span class="exp-tag">Confluence</span>
+                <span class="exp-tag">Stakeholder Mgmt</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="container">
+        <div class="sec-header reveal">
+            <div class="sec-eyebrow">Skills</div>
+            <h2 class="sec-title">CORE<br>COMPETENCIES.</h2>
+        </div>
+
+        <div class="skills-grid reveal">
+            <div class="skill-block">
+                <div class="skill-block-header">
+                    <div class="skill-ico p-cyan"><i class="fa-solid fa-box-open"></i></div>
+                    <div>
+                        <div class="skill-block-title">Product & BA</div>
+                        <div class="skill-block-sub">Requirements · Delivery</div>
+                    </div>
+                </div>
+                <div class="skill-list">
+                    <div class="skill-item-row"><span class="skill-item-name">Agile / Scrum</span>
+                        <div class="skill-dot"></div>
+                    </div>
+                    <div class="skill-item-row"><span class="skill-item-name">User Stories & PRDs</span>
+                        <div class="skill-dot"></div>
+                    </div>
+                    <div class="skill-item-row"><span class="skill-item-name">Requirement Gathering</span>
+                        <div class="skill-dot"></div>
+                    </div>
+                    <div class="skill-item-row"><span class="skill-item-name">Workflow Design</span>
+                        <div class="skill-dot"></div>
+                    </div>
+                    <div class="skill-item-row"><span class="skill-item-name">Wireframing (Figma)</span>
+                        <div class="skill-dot"></div>
+                    </div>
+                    <div class="skill-item-row"><span class="skill-item-name">Stakeholder Communication</span>
+                        <div class="skill-dot"></div>
+                    </div>
                 </div>
             </div>
 
-            <aside class="about-side reveal">
-                <div class="profile-photo-card circle">
-                    <img src="assets/img/lybui.jpg" alt="Ly Da Bui portrait">
+            <div class="skill-block">
+                <div class="skill-block-header">
+                    <div class="skill-ico p-purple"><i class="fa-solid fa-database"></i></div>
+                    <div>
+                        <div class="skill-block-title">Data & Analytics</div>
+                        <div class="skill-block-sub">Insights · Visualization</div>
+                    </div>
                 </div>
-            </aside>
+                <div class="skill-list">
+                    <div class="skill-item-row"><span class="skill-item-name">Power BI & DAX</span>
+                        <div class="skill-dot" style="background:var(--accent2)"></div>
+                    </div>
+                    <div class="skill-item-row"><span class="skill-item-name">SQL (MySQL)</span>
+                        <div class="skill-dot" style="background:var(--accent2)"></div>
+                    </div>
+                    <div class="skill-item-row"><span class="skill-item-name">Python & Pandas</span>
+                        <div class="skill-dot" style="background:var(--accent2)"></div>
+                    </div>
+                    <div class="skill-item-row"><span class="skill-item-name">Data Modeling</span>
+                        <div class="skill-dot" style="background:var(--accent2)"></div>
+                    </div>
+                    <div class="skill-item-row"><span class="skill-item-name">Excel</span>
+                        <div class="skill-dot" style="background:var(--accent2)"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-block">
+                <div class="skill-block-header">
+                    <div class="skill-ico p-green"><i class="fa-solid fa-diagram-project"></i></div>
+                    <div>
+                        <div class="skill-block-title">Systems & Docs</div>
+                        <div class="skill-block-sub">Modeling · Diagrams</div>
+                    </div>
+                </div>
+                <div class="skill-list">
+                    <div class="skill-item-row"><span class="skill-item-name">BPMN / DFD</span>
+                        <div class="skill-dot" style="background:#22c55e"></div>
+                    </div>
+                    <div class="skill-item-row"><span class="skill-item-name">UML</span>
+                        <div class="skill-dot" style="background:#22c55e"></div>
+                    </div>
+                    <div class="skill-item-row"><span class="skill-item-name">ERD</span>
+                        <div class="skill-dot" style="background:#22c55e"></div>
+                    </div>
+                    <div class="skill-item-row"><span class="skill-item-name">Jira / Confluence</span>
+                        <div class="skill-dot" style="background:#22c55e"></div>
+                    </div>
+                    <div class="skill-item-row"><span class="skill-item-name">Technical Documentation</span>
+                        <div class="skill-dot" style="background:#22c55e"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- SKILLS -->
-<section class="section theme-gray" id="skills">
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section class="projects-shell" id="projects">
     <div class="container">
-        <header class="section-header reveal">
-            <h2 class="section-title">My Skills</h2>
-            <p class="section-subtitle">Core strengths in data, business analysis and collaboration</p>
-        </header>
+        <div class="sec-header reveal">
+            <div class="sec-eyebrow">Projects</div>
+            <h2 class="sec-title">FEATURED<br>WORK.</h2>
+            <p class="sec-sub">Selected projects across data analytics, business analysis, and software systems.</p>
+        </div>
 
-        <div class="skills-grid">
-            <article class="skill-card white-card tilt">
-                <h4><i class="fa-solid fa-database"></i> Data & Analytics</h4>
-                <ul class="bullet">
-                    <li>Power BI & DAX</li>
-                    <li>SQL Databases</li>
-                    <li>Python</li>
-                    <li>Excel</li>
-                </ul>
-            </article>
+        <div class="filter-bar reveal">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="bi">Power BI</button>
+            <button class="filter-btn" data-filter="recsys">Recommendation</button>
+            <button class="filter-btn" data-filter="ba">Business Analysis</button>
+            <button class="filter-btn" data-filter="software">Software & DB</button>
+        </div>
 
-            <article class="skill-card white-card tilt">
-                <h4><i class="fa-solid fa-diagram-project"></i> Business Analysis</h4>
-                <ul class="bullet">
-                    <li>BPMN / DFD / UML</li>
-                    <li>Requirements Analysis</li>
-                    <li>Process Optimization</li>
-                    <li>System Design</li>
-                </ul>
-            </article>
+        <div class="projects-grid" id="projGrid">
 
-            <article class="skill-card white-card tilt">
-                <h4><i class="fa-solid fa-people-group"></i> Soft Skills</h4>
-                <ul class="bullet">
-                    <li>Team Collaboration</li>
-                    <li>Communication</li>
-                    <li>Problem Solving</li>
-                    <li>Project Coordination</li>
-                </ul>
-            </article>
+            <div class="proj-card reveal" data-category="bi">
+                <div class="proj-img"><img src="assets/img/Ly Da Bui - sale performance.jpg"
+                                           alt="Sales Performance Dashboard">
+                    <div class="proj-img-overlay"></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-kicker">Power BI · Dashboard</div>
+                    <div class="proj-title">Sales Performance Dashboard</div>
+                    <p class="proj-desc">Executive dashboard analyzing revenue, margin, and product-channel performance
+                        with DAX and star schema modeling.</p>
+                    <div class="proj-chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span
+                            class="chip">Star Schema</span></div>
+                    <div class="proj-actions">
+                        <a class="link-btn prim"
+                           href="https://app.powerbi.com/view?r=eyJrIjoiZGEzZDg1ZGEtZTI1ZC00OTdiLTg2NjYtYTExODBjYjhhYWJhIiwidCI6ImJlODMyOWE3LTcyMTgtNDlhMy05YWMxLWQ3Yjk1NDU2M2YzOSIsImMiOjEwfQ%3D%3D"
+                           target="_blank" rel="noopener"><i class="fa-solid fa-up-right-from-square"></i> Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card reveal" data-category="bi">
+                <div class="proj-img"><img src="assets/img/Logistics.jpg" alt="Supply Chain Analytics">
+                    <div class="proj-img-overlay"></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-kicker">Power BI · Logistics</div>
+                    <div class="proj-title">Supply Chain Analytics Dashboard</div>
+                    <p class="proj-desc">Dashboard highlighting delivery performance, returns, and loss drivers to
+                        surface operational bottlenecks.</p>
+                    <div class="proj-chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span
+                            class="chip">Logistics</span></div>
+                    <div class="proj-actions">
+                        <a class="link-btn prim"
+                           href="https://app.powerbi.com/view?r=eyJrIjoiOTMzMWEwN2UtOWZkNC00NzY5LTgxZjQtNTEzMmI3ZmIyYmM3IiwidCI6ImJlODMyOWE3LTcyMTgtNDlhMy05YWMxLWQ3Yjk1NDU2M2YzOSIsImMiOjEwfQ%3D%3D"
+                           target="_blank" rel="noopener"><i class="fa-solid fa-up-right-from-square"></i> Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card reveal" data-category="recsys">
+                <div class="proj-img"><img src="assets/img/movie recommendation system.jpg"
+                                           alt="Movie Recommendation System">
+                    <div class="proj-img-overlay"></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-kicker">Python · Recommendation</div>
+                    <div class="proj-title">Movie Recommendation System</div>
+                    <p class="proj-desc">Built recommendation models on MovieLens data and compared collaborative
+                        filtering approaches using RMSE.</p>
+                    <div class="proj-chips"><span class="chip">Python</span><span class="chip">Pandas</span><span
+                            class="chip">CF</span></div>
+                    <div class="proj-actions">
+                        <a class="link-btn ghost-btn" href="https://github.com/lybuida/Movie_Recommendation_System"
+                           target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
+                        <a class="link-btn ghost-btn" href="assets/docs/Movie_Recommendation_System.pdf" target="_blank"
+                           rel="noopener"><i class="fa-regular fa-file-lines"></i> Report</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card reveal" data-category="ba">
+                <div class="proj-img"><img src="assets/img/saco_crm.jpg" alt="SACO Information System">
+                    <div class="proj-img-overlay"></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-kicker">MIS · CRM / ERP Assessment</div>
+                    <div class="proj-title">Information System for SACO</div>
+                    <p class="proj-desc">Compared enterprise solutions, analyzed gaps, and proposed a phased roadmap to
+                        improve business operations.</p>
+                    <div class="proj-chips"><span class="chip">Analysis</span><span class="chip">Roadmap</span><span
+                            class="chip">ERP</span></div>
+                    <div class="proj-actions">
+                        <a class="link-btn ghost-btn" href="assets/docs/LyBui_SACO.pdf" target="_blank"
+                           rel="noopener"><i class="fa-regular fa-file-lines"></i> Report</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card reveal" data-category="ba">
+                <div class="proj-img"><img src="assets/img/Management AD.jpg" alt="Classified Ads System">
+                    <div class="proj-img-overlay"></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-kicker">Systems Design & Analysis</div>
+                    <div class="proj-title">Classified Ads Management System</div>
+                    <p class="proj-desc">Designed system requirements, workflows, and database structure for an
+                        advertising management platform.</p>
+                    <div class="proj-chips"><span class="chip">Use Case</span><span class="chip">DFD</span><span
+                            class="chip">ERD</span></div>
+                    <div class="proj-actions">
+                        <a class="link-btn ghost-btn" href="assets/docs/LyBui_PTTKHT.pdf" target="_blank"
+                           rel="noopener"><i class="fa-regular fa-file-lines"></i> Report</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card reveal" data-category="software">
+                <div class="proj-img"><img src="assets/img/ordering food web.jpg" alt="Food Ordering Web">
+                    <div class="proj-img-overlay"></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-kicker">Software & Database</div>
+                    <div class="proj-title">Ordering Food Web</div>
+                    <p class="proj-desc">Web-based food ordering system with browsing, cart, payment flow, and admin
+                        management.</p>
+                    <div class="proj-chips"><span class="chip">Flask</span><span class="chip">MySQL</span><span
+                            class="chip">Jira</span></div>
+                    <div class="proj-actions">
+                        <a class="link-btn ghost-btn" href="https://github.com/chivtn/Ordering_Food_App" target="_blank"
+                           rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
+                        <a class="link-btn prim" href="https://huyvotan.pythonanywhere.com" target="_blank"
+                           rel="noopener"><i class="fa-solid fa-globe"></i> Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card reveal" data-category="software">
+                <div class="proj-img"><img src="assets/img/dormitory_management_system.jpg" alt="Dormitory Management">
+                    <div class="proj-img-overlay"></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-kicker">Software & Database</div>
+                    <div class="proj-title">Dormitory Management System</div>
+                    <p class="proj-desc">Analyzed business processes and designed a 3-tier prototype supporting room
+                        assignment and billing logic.</p>
+                    <div class="proj-chips"><span class="chip">MySQL</span><span class="chip">DFD/ERD</span><span
+                            class="chip">3-Tier</span></div>
+                    <div class="proj-actions">
+                        <a class="link-btn ghost-btn" href="https://github.com/lybuida/Dormitory_Management_System"
+                           target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card reveal" data-category="software">
+                <div class="proj-img"><img src="assets/img/Student Management System.jpg" alt="Student Management">
+                    <div class="proj-img-overlay"></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-kicker">Software & Database</div>
+                    <div class="proj-title">Student Management System</div>
+                    <p class="proj-desc">Multi-role system with UML models, relational schema, and structured academic
+                        workflows.</p>
+                    <div class="proj-chips"><span class="chip">UML</span><span class="chip">MySQL</span><span
+                            class="chip">Flask</span></div>
+                    <div class="proj-actions">
+                        <a class="link-btn ghost-btn" href="https://github.com/lybuida/Student_Management_System"
+                           target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card reveal" data-category="recsys">
+                <div class="proj-img"><img src="assets/img/Product Recommendation.jpg" alt="Product Recommendation">
+                    <div class="proj-img-overlay"></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-kicker">Python · Big Data</div>
+                    <div class="proj-title">Product Recommendation (E-commerce)</div>
+                    <p class="proj-desc">Recommendation logic and evaluation pipeline, comparing ranking metrics and
+                        outlining A/B testing direction.</p>
+                    <div class="proj-chips"><span class="chip">Python</span><span class="chip">Similarity</span><span
+                            class="chip">Metrics</span></div>
+                    <div class="proj-actions">
+                        <a class="link-btn ghost-btn"
+                           href="https://github.com/lybuida/Product_Recommendation_E-commerce" target="_blank"
+                           rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card reveal" data-category="ba">
+                <div class="proj-img"><img src="assets/img/SAP CRM System Analysis.jpg" alt="SAP CRM Analysis">
+                    <div class="proj-img-overlay"></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-kicker">Business Analysis · CRM</div>
+                    <div class="proj-title">SAP CRM System Analysis</div>
+                    <p class="proj-desc">Studied CRM capabilities, compared alternatives, and proposed improvements for
+                        customer and business operations.</p>
+                    <div class="proj-chips"><span class="chip">BA</span><span class="chip">SAP</span><span class="chip">CRM</span>
+                    </div>
+                    <div class="proj-actions">
+                        <a class="link-btn ghost-btn" href="assets/docs/HTTTQL_CRM_SAP.pdf" target="_blank"
+                           rel="noopener"><i class="fa-regular fa-file-lines"></i> Report</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
+<div class="divider"></div>
 
-<!-- PROJECTS (theme: accent) -->
-<section class="section theme-accent" id="projects">
+<!-- CONTACT -->
+<section id="contact">
     <div class="container">
-        <header class="section-header reveal">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">
-                Here are some of my recent projects that showcase my skills in data analytics, business
-                analysis, and software development
-            </p>
-        </header>
-
-        <div class="projects-filter reveal" role="tablist" aria-label="Filter projects">
-            <button class="filter-btn active" data-filter="all" role="tab">All</button>
-            <button class="filter-btn" data-filter="bi" role="tab">Power BI</button>
-            <button class="filter-btn" data-filter="recsys" role="tab">Recommendation</button>
-            <button class="filter-btn" data-filter="ba" role="tab">Business Analysis</button>
-            <button class="filter-btn" data-filter="software" role="tab">Software & DB</button>
+        <div class="sec-header reveal">
+            <div class="sec-eyebrow">Contact</div>
+            <h2 class="sec-title">LET'S<br>CONNECT.</h2>
+            <p class="sec-sub">Open to Product, Business Analysis, and Data roles. Based in Ho Chi Minh City.</p>
         </div>
 
-        <div class="projects-grid">
-            <!-- Power BI -->
-            <article class="project-card glass tilt reveal" data-category="bi">
-                <div class="project-thumb">
-                    <img src="assets/img/Ly Da Bui - sale performance.jpg" alt="Sales Performance Dashboard thumbnail">
-                </div>
-                <div class="project-body">
-                    <h3 class="project-title">Sales Performance Dashboard</h3>
-                    <p class="project-kicker">Power BI Dashboard</p>
-                    <p class="project-desc">Star schema, DAX measures and executive view for revenue, margin and
-                        product/channel trends.</p>
-                    <div class="chips">
-                        <span class="chip">Power BI</span><span class="chip">DAX</span><span
-                            class="chip">Star Schema</span>
-                    </div>
-                    <div class="links">
-                        <a class="btn-mini primary" target="_blank" rel="noopener"
-                           href="https://app.powerbi.com/view?r=eyJrIjoiZGEzZDg1ZGEtZTI1ZC00OTdiLTg2NjYtYTExODBjYjhhYWJhIiwidCI6ImJlODMyOWE3LTcyMTgtNDlhMy05YWMxLWQ3Yjk1NDU2M2YzOSIsImMiOjEwfQ%3D%3D">
-                            <i class="fa-solid fa-up-right-from-square"></i> Dashboard
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card glass tilt reveal" data-category="bi">
-                <div class="project-thumb">
-                    <img src="assets/img/Logistics.jpg" alt="Sales Performance Dashboard thumbnail">
-                </div>
-                <div class="project-body">
-                    <h3 class="project-title">Supply Chain Analytics Dashboard</h3>
-                    <p class="project-kicker">Power BI Dashboard</p>
-                    <p class="project-desc">Delivery KPIs (on-time %, avg days), returns & loss drivers with DAX.
-                        Highlighted bottlenecks & high-loss products.</p>
-                    <div class="chips">
-                        <span class="chip">Power BI</span><span class="chip">DAX</span><span
-                            class="chip">Logistics</span>
-                    </div>
-                    <div class="links">
-                        <a class="btn-mini primary" target="_blank" rel="noopener"
-                           href="https://app.powerbi.com/view?r=eyJrIjoiOTMzMWEwN2UtOWZkNC00NzY5LTgxZjQtNTEzMmI3ZmIyYmM3IiwidCI6ImJlODMyOWE3LTcyMTgtNDlhMy05YWMxLWQ3Yjk1NDU2M2YzOSIsImMiOjEwfQ%3D%3D">
-                            <i class="fa-solid fa-up-right-from-square"></i> Dashboard
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- RecSys -->
-            <article class="project-card glass tilt reveal" data-category="recsys">
-                <div class="project-thumb">
-                    <img src="assets/img/movie recommendation system.jpg" alt="Sales Performance Dashboard thumbnail">
-                </div>
-                <div class="project-body">
-                    <h3 class="project-title">Movie Recommendation System</h3>
-                    <p class="project-kicker">Recommendation — Data Analytics</p>
-                    <p class="project-desc">Content-based + User/Item CF on MovieLens (100K+ ratings); best RMSE with
-                        User-based CF.</p>
-                    <div class="chips">
-                        <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">CF</span>
-                    </div>
-                    <div class="links">
-                        <a class="btn-mini" target="_blank" rel="noopener"
-                           href="https://github.com/lybuida/Movie_Recommendation_System">
-                            <i class="fa-brands fa-github"></i> Repo
-                        </a>
-                        <a class="btn-mini" target="_blank" rel="noopener"
-                           href="assets/docs/Movie_Recommendation_System_slide.pdf">
-                            <i class="fa-regular fa-file-lines"></i> Slide
-                        </a>
-                        <a class="btn-mini" target="_blank" rel="noopener"
-                           href="assets/docs/Movie_Recommendation_System.pdf">
-                            <i class="fa-regular fa-file-lines"></i> Report
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card glass tilt reveal" data-category="recsys">
-                <div class="project-thumb">
-                    <img src="assets/img/Product Recommendation.jpg" alt="Sales Performance Dashboard thumbnail">
-                </div>
-                <div class="project-body">
-                    <h3 class="project-title">Product Recommendation (E-commerce)</h3>
-                    <p class="project-kicker">Recommendation — Big Data Program</p>
-                    <p class="project-desc">Metrics pipeline & similarity-based recommenders; compared Precision@K, MAP;
-                        outlined online A/B plan.</p>
-                    <div class="chips">
-                        <span class="chip">Python</span><span class="chip">Similarity</span><span
-                            class="chip">Metrics</span>
-                    </div>
-                    <div class="links">
-                        <a class="btn-mini" target="_blank" rel="noopener"
-                           href="https://github.com/lybuida/Product_Recommendation_E-commerce">
-                            <i class="fa-brands fa-github"></i> Repo
-                        </a>
-                        <a class="btn-mini" target="_blank" rel="noopener"
-                           href="assets/docs/OU_DB2_Group 3_Presentation-Slide.pdf">
-                            <i class="fa-regular fa-file-lines"></i> Slide
-                        </a>
-                        <a class="btn-mini" target="_blank" rel="noopener"
-                           href="assets/docs/OU_DB2_Group 3_Final Report.pdf">
-                            <i class="fa-regular fa-file-lines"></i> Report
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- BA -->
-            <article class="project-card glass tilt reveal" data-category="ba">
-                <div class="project-thumb">
-                    <img src="assets/img/Management AD.jpg" alt="Sales Performance Dashboard thumbnail">
-                </div>
-                <div class="project-body">
-                    <h3 class="project-title">Classified Ads Management System</h3>
-                    <p class="project-kicker">Systems Design & Analysis</p>
-                    <p class="project-desc">Requirements, Use Case/DFD/ERD and database schema; functional specs for
-                        accounts, ads workflow and reporting.</p>
-                    <div class="chips">
-                        <span class="chip">Use Case</span><span class="chip">DFD</span><span class="chip">ERD</span>
-                    </div>
-                    <div class="links">
-                        <a class="btn-mini" target="_blank" rel="noopener" href="assets/docs/LyBui_PTTKHT.pdf">
-                            <i class="fa-regular fa-file-lines"></i> Report
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card glass tilt reveal" data-category="ba">
-                <div class="project-thumb">
-                    <img src="assets/img/saco_crm.jpg" alt="Sales Performance Dashboard thumbnail">
-                </div>
-                <div class="project-body">
-                    <h3 class="project-title">Information System Development for SACO</h3>
-                    <p class="project-kicker">MIS — CRM/ERP Assessment</p>
-                    <p class="project-desc">Gap & cost–benefit analysis; compared Zoho One vs Microsoft Dynamics 365;
-                        proposed phased roadmap.</p>
-                    <div class="chips">
-                        <span class="chip">Analysis</span><span class="chip">Roadmap</span><span class="chip">ERP</span>
-                    </div>
-                    <div class="links">
-                        <a class="btn-mini" target="_blank" rel="noopener" href="assets/docs/LyBui_SACO.pdf">
-                            <i class="fa-regular fa-file-lines"></i> Report
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card glass tilt reveal" data-category="ba">
-                <div class="project-thumb">
-                    <img src="assets/img/SAP CRM System Analysis.jpg" alt="SAP CRM System Analysis thumbnail">
-                </div>
-                <div class="project-body">
-                    <h3 class="project-title">SAP CRM System Analysis</h3>
-                    <p class="project-kicker">Business Analysis — CRM Assessment</p>
-                    <p class="project-desc">
-                        Studied SAP CRM features, benchmarked with Oracle, and proposed a roadmap to improve customer management and business efficiency
-                    </p>
-                    <div class="chips">
-                        <span class="chip">BA</span><span class="chip">Analysis</span><span class="chip">CRM</span>
-                    </div>
-                    <div class="links">
-                        <a class="btn-mini" target="_blank" rel="noopener" href="assets/docs/HTTTQL_CRM_SAP.pdf">
-                            <i class="fa-regular fa-file-lines"></i> Report
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Software & DB -->
-            <article class="project-card glass tilt reveal" data-category="software">
-                <div class="project-thumb">
-                    <img src="assets/img/ordering food web.jpg" alt="Ordering Food Web thumbnail">
-                </div>
-                <div class="project-body">
-                    <h3 class="project-title">Ordering Food Web</h3>
-                    <p class="project-kicker">Software & Database</p>
-                    <p class="project-desc">
-                       Developed a web-based ordering system (Flask + MySQL) with restaurant browsing, cart, payment integration, and admin controls.
-                    </p>
-                    <div class="chips">
-                        <span class="chip">Flask</span><span class="chip">API</span><span
-                            class="chip">MySQL</span><span class="chip">Jira</span>
-                    </div>
-                    <div class="links">
-                        <a class="btn-mini" target="_blank" rel="noopener"
-                           href="https://github.com/chivtn/Ordering_Food_App">
-                            <i class="fa-brands fa-github"></i> Repo
-                        </a>
-                        <a class="btn-mini" target="_blank" rel="noopener"
-                           href="assets/docs/Ordering Food Web - Report.pdf">
-                            <i class="fa-regular fa-file-lines"></i> Report
-                        </a>
-                        <a class="btn-mini primary" target="_blank" rel="noopener"
-                           href="https://huyvotan.pythonanywhere.com">
-                            <i class="fa-solid fa-globe"></i> Website
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card glass tilt reveal" data-category="software">
-                <div class="project-thumb">
-                    <img src="assets/img/dormitory_management_system.jpg" alt="Sales Performance Dashboard thumbnail">
-                </div>
-                <div class="project-body">
-                    <h3 class="project-title">Dormitory Management System</h3>
-                    <p class="project-kicker">Software & Database</p>
-                    <p class="project-desc">Process analysis; DFD/ERD & schema (12+ entities); 3-tier architecture;
-                        prototype for auto room assignment & billing.</p>
-                    <div class="chips">
-                        <span class="chip">MySQL</span><span class="chip">DFD/ERD</span><span class="chip">3-Tier</span>
-                    </div>
-                    <div class="links">
-                        <a class="btn-mini" target="_blank" rel="noopener"
-                           href="https://github.com/lybuida/Dormitory_Management_System">
-                            <i class="fa-brands fa-github"></i> Repo
-                        </a>
-                        <a class="btn-mini" target="_blank" rel="noopener" href="assets/docs/Báo cáo QuanLyKyTucXa.pdf">
-                            <i class="fa-regular fa-file-lines"></i> Report
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card glass tilt reveal" data-category="software">
-                <div class="project-thumb">
-                    <img src="assets/img/Student Management System.jpg" alt="Sales Performance Dashboard thumbnail">
-                </div>
-                <div class="project-body">
-                    <h3 class="project-title">Student Management System</h3>
-                    <p class="project-kicker">Software & Database</p>
-                    <p class="project-desc">Requirements; UML (Use Case/Activity/Sequence/Class/State); relational
-                        schema and multi-role access.</p>
-                    <div class="chips">
-                        <span class="chip">UML</span><span class="chip">MySQL</span><span class="chip">Flask</span>
-                    </div>
-                    <div class="links">
-                        <a class="btn-mini" target="_blank" rel="noopener"
-                           href="https://github.com/lybuida/Student_Management_System">
-                            <i class="fa-brands fa-github"></i> Repo
-                        </a>
-                        <a class="btn-mini" target="_blank" rel="noopener" href="assets/docs/Bao-cao-CNPM.pdf">
-                            <i class="fa-regular fa-file-lines"></i> Report
-                        </a>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT (theme: gray) -->
-<section class="section theme-gray" id="contact">
-    <div class="container">
-        <header class="section-header reveal">
-            <h2 class="section-title">Contact</h2>
-            <p class="section-subtitle">Let’s collaborate. I’m open to DA/BA internships and projects.</p>
-        </header>
-
-        <div class="contact-grid">
-            <a class="contact-card glass tilt reveal" href="mailto:lybui.lbb@gmail.com">
-                <i class="contact-ico fa-regular fa-envelope"></i>
+        <div class="contact-grid reveal">
+            <a class="contact-block" href="mailto:lybui.lbb@gmail.com">
+                <i class="contact-icon ci-email fa-regular fa-envelope"></i>
                 <div>
                     <div class="contact-label">Email</div>
-                    <div class="contact-value">lybui.lbb@gmail.com</div>
+                    <div class="contact-val">lybui.lbb@gmail.com</div>
                 </div>
             </a>
-
-            <a class="contact-card glass tilt reveal" href="https://www.linkedin.com/in/lybuida/" target="_blank"
-               rel="noopener">
-                <i class="contact-ico fa-brands fa-linkedin"></i>
+            <a class="contact-block" href="https://www.linkedin.com/in/lybuida/" target="_blank" rel="noopener">
+                <i class="contact-icon ci-linkedin fa-brands fa-linkedin"></i>
                 <div>
                     <div class="contact-label">LinkedIn</div>
-                    <div class="contact-value">linkedin.com/in/lybuida</div>
+                    <div class="contact-val">linkedin.com/in/lybuida</div>
                 </div>
             </a>
-
-            <a class="contact-card glass tilt reveal" href="https://github.com/lybuida" target="_blank" rel="noopener">
-                <i class="contact-ico fa-brands fa-github"></i>
+            <a class="contact-block" href="https://github.com/lybuida" target="_blank" rel="noopener">
+                <i class="contact-icon ci-github fa-brands fa-github"></i>
                 <div>
                     <div class="contact-label">GitHub</div>
-                    <div class="contact-value">github.com/lybuida</div>
+                    <div class="contact-val">github.com/lybuida</div>
                 </div>
             </a>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
+<footer>
     <div class="container">
-        <p>© <span id="year"></span> Ly Da Bui. All rights reserved.</p>
+        <p>© <span id="yr"></span> <span>Ly Da Bui</span> · Product · Business Analysis · Data</p>
     </div>
 </footer>
-
-<!-- Scripts -->
-<script src="script.js" defer></script>
+<script src="script.js"></script>
 </body>
 </html>
