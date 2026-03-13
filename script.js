@@ -88,7 +88,13 @@ const PROJECT_DATA = {
       { label: "Live Dashboard", icon: "fa-solid fa-up-right-from-square", href: "https://app.powerbi.com/view?r=eyJrIjoiZGEzZDg1ZGEtZTI1ZC00OTdiLTg2NjYtYTExODBjYjhhYWJhIiwidCI6ImJlODMyOWE3LTcyMTgtNDlhMy05YWMxLWQ3Yjk1NDU2M2YzOSIsImMiOjEwfQ%3D%3D", primary: true }
     ],
     images: [
-      "assets/img/Ly Da Bui - sale performance.jpg"
+      "assets/img/Ly Da Bui - sale performance.jpg",
+      "assets/img/supply chain_page-0001.jpg",
+      "assets/img/supply chain_page-0002.jpg",
+      "assets/img/supply chain_page-0003.jpg",
+      "assets/img/supply chain_page-0004.jpg",
+      "assets/img/supply chain_page-0005.jpg",
+      "assets/img/supply chain_page-0006.jpg"
     ]
   },
   "supply-chain": {
@@ -106,7 +112,12 @@ const PROJECT_DATA = {
       { label: "Live Dashboard", icon: "fa-solid fa-up-right-from-square", href: "https://app.powerbi.com/view?r=eyJrIjoiOTMzMWEwN2UtOWZkNC00NzY5LTgxZjQtNTEzMmI3ZmIyYmM3IiwidCI6ImJlODMyOWE3LTcyMTgtNDlhMy05YWMxLWQ3Yjk1NDU2M2YzOSIsImMiOjEwfQ%3D%3D", primary: true }
     ],
     images: [
-      "assets/img/Logistics.jpg"
+      "assets/img/Logistics.jpg", "assets/img/supply chain_page-0001.jpg",
+      "assets/img/supply chain_page-0002.jpg",
+      "assets/img/supply chain_page-0003.jpg",
+      "assets/img/supply chain_page-0004.jpg",
+      "assets/img/supply chain_page-0005.jpg",
+      "assets/img/supply chain_page-0006.jpg"
     ]
   },
   "movie-rec": {
