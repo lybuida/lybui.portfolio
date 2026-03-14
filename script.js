@@ -73,6 +73,117 @@ if (line1 && line2 && line3) {
 // Each project maps to its card via data-project-id attribute
 // Images array: primary + additional screenshots (add more paths as needed)
 const PROJECT_DATA = {
+  "saco": {
+    title: "Information System for SACO",
+    kicker: "MIS · CRM / ERP Assessment",
+    desc: "Analyzed SACO's existing information systems, compared enterprise CRM/ERP solutions, identified operational gaps, and proposed a phased digital transformation roadmap aligned to business priorities.",
+    highlights: [
+      "AS-IS / TO-BE process analysis",
+      "Vendor comparison: SAP, Salesforce, Oracle",
+      "Gap analysis mapped to business requirements",
+      "Phased implementation roadmap with ROI framing"
+    ],
+    chips: ["Business Analysis", "ERP", "CRM", "Roadmap", "Gap Analysis"],
+    links: [
+      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/LyBui_SACO.pdf", primary: false }
+    ],
+    images: [
+      "assets/img/saco_crm.jpg"
+    ]
+  },
+  "classified-ads": {
+    title: "Classified Ads Management System",
+    kicker: "Systems Design & Analysis",
+    desc: "Full system analysis and design for a classified advertising management platform. Covered requirements gathering, process modeling, and complete database architecture.",
+    highlights: [
+      "Use case modeling: 6 actors, 20+ use cases",
+      "DFD Level 0 → Level 2 decomposition",
+      "Normalized ERD with 12 entities",
+      "Sequence and activity diagrams"
+    ],
+    chips: ["Use Case", "DFD", "ERD", "UML", "System Design"],
+    links: [
+      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/LyBui_PTTKHT.pdf", primary: false }
+    ],
+    images: [
+      "assets/img/Management AD.jpg"
+    ]
+  },
+  "sap-crm": {
+    title: "SAP CRM System Analysis",
+    kicker: "Business Analysis · CRM",
+    desc: "In-depth study of SAP CRM module capabilities across sales, service, and marketing. Compared with Salesforce and Microsoft Dynamics, and proposed configuration improvements aligned to business process needs.",
+    highlights: [
+      "SAP CRM module deep-dive: Sales, Service, Marketing",
+      "Competitive comparison: SAP vs Salesforce vs MS Dynamics",
+      "Business process gap identification",
+      "Improvement recommendations with priority matrix"
+    ],
+    chips: ["Business Analysis", "SAP", "CRM", "Competitive Analysis"],
+    links: [
+      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/HTTTQL_CRM_SAP.pdf", primary: false }
+    ],
+    images: [
+      "assets/img/SAP CRM System Analysis.jpg"
+    ]
+  },
+  "food-ordering": {
+    title: "Ordering Food Web",
+    kicker: "Software & Database",
+    desc: "Full-stack web application for food ordering with customer-facing browsing, cart, and checkout flow, plus a complete admin panel for restaurant and order management.",
+    highlights: [
+      "Role-based access: customer, restaurant, admin",
+      "Cart, payment flow, and order tracking",
+      "Admin dashboard: menu, orders, analytics",
+      "Deployed live on PythonAnywhere"
+    ],
+    chips: ["Flask", "MySQL", "Python", "Jira", "Full-Stack"],
+    links: [
+      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/chivtn/Ordering_Food_App", primary: false },
+      { label: "Live Site", icon: "fa-solid fa-globe", href: "https://huyvotan.pythonanywhere.com", primary: true }
+    ],
+    images: [
+      "assets/img/ordering food web.jpg"
+    ]
+  },
+  "dormitory": {
+    title: "Dormitory Management System",
+    kicker: "Software & Database",
+    desc: "Analyzed dormitory business processes and designed a 3-tier architecture prototype covering room assignment, student registration, and automated billing workflows.",
+    highlights: [
+      "3-tier architecture: presentation, logic, data",
+      "Room assignment algorithm and availability logic",
+      "Billing cycle automation design",
+      "Full DFD and ERD documentation"
+    ],
+    chips: ["MySQL", "DFD", "ERD", "3-Tier Architecture"],
+    links: [
+      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/lybuida/Dormitory_Management_System", primary: false },
+      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/Báo cáo QuanLyKyTucXa.pdf", primary: false }
+    ],
+    images: [
+      "assets/img/dormitory_management_system.jpg"
+    ]
+  },
+  "student-mgmt": {
+    title: "Student Management System",
+    kicker: "Software & Database",
+    desc: "Multi-role academic management system with full UML modeling, relational database schema, and structured workflows for students, faculty, and administrators.",
+    highlights: [
+      "4 user roles: student, lecturer, admin, registrar",
+      "UML: class, sequence, activity, use case diagrams",
+      "Normalized relational schema (3NF)",
+      "Grade management and transcript generation"
+    ],
+    chips: ["UML", "MySQL", "Flask", "System Design"],
+    links: [
+      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/lybuida/Student_Management_System", primary: false },
+      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/Bao-cao-CNPM.pdf", primary: false }
+    ],
+    images: [
+      "assets/img/Student Management System.jpg"
+    ]
+  },
   "sales-dashboard": {
     title: "Sales Performance Dashboard",
     kicker: "Power BI · Dashboard",
@@ -140,99 +251,6 @@ const PROJECT_DATA = {
       "assets/img/movie recommendation system.jpg"
     ]
   },
-  "saco": {
-    title: "Information System for SACO",
-    kicker: "MIS · CRM / ERP Assessment",
-    desc: "Analyzed SACO's existing information systems, compared enterprise CRM/ERP solutions, identified operational gaps, and proposed a phased digital transformation roadmap aligned to business priorities.",
-    highlights: [
-      "AS-IS / TO-BE process analysis",
-      "Vendor comparison: SAP, Salesforce, Oracle",
-      "Gap analysis mapped to business requirements",
-      "Phased implementation roadmap with ROI framing"
-    ],
-    chips: ["Business Analysis", "ERP", "CRM", "Roadmap", "Gap Analysis"],
-    links: [
-      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/LyBui_SACO.pdf", primary: false }
-    ],
-    images: [
-      "assets/img/saco_crm.jpg"
-    ]
-  },
-  "classified-ads": {
-    title: "Classified Ads Management System",
-    kicker: "Systems Design & Analysis",
-    desc: "Full system analysis and design for a classified advertising management platform. Covered requirements gathering, process modeling, and complete database architecture.",
-    highlights: [
-      "Use case modeling: 6 actors, 20+ use cases",
-      "DFD Level 0 → Level 2 decomposition",
-      "Normalized ERD with 12 entities",
-      "Sequence and activity diagrams"
-    ],
-    chips: ["Use Case", "DFD", "ERD", "UML", "System Design"],
-    links: [
-      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/LyBui_PTTKHT.pdf", primary: false }
-    ],
-    images: [
-      "assets/img/Management AD.jpg"
-    ]
-  },
-  "food-ordering": {
-    title: "Ordering Food Web",
-    kicker: "Software & Database",
-    desc: "Full-stack web application for food ordering with customer-facing browsing, cart, and checkout flow, plus a complete admin panel for restaurant and order management.",
-    highlights: [
-      "Role-based access: customer, restaurant, admin",
-      "Cart, payment flow, and order tracking",
-      "Admin dashboard: menu, orders, analytics",
-      "Deployed live on PythonAnywhere"
-    ],
-    chips: ["Flask", "MySQL", "Python", "Jira", "Full-Stack"],
-    links: [
-      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/chivtn/Ordering_Food_App", primary: false },
-      { label: "Live Site", icon: "fa-solid fa-globe", href: "https://huyvotan.pythonanywhere.com", primary: true }
-    ],
-    images: [
-      "assets/img/ordering food web.jpg"
-    ]
-  },
-  "dormitory": {
-    title: "Dormitory Management System",
-    kicker: "Software & Database",
-    desc: "Analyzed dormitory business processes and designed a 3-tier architecture prototype covering room assignment, student registration, and automated billing workflows.",
-    highlights: [
-      "3-tier architecture: presentation, logic, data",
-      "Room assignment algorithm and availability logic",
-      "Billing cycle automation design",
-      "Full DFD and ERD documentation"
-    ],
-    chips: ["MySQL", "DFD", "ERD", "3-Tier Architecture"],
-    links: [
-      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/lybuida/Dormitory_Management_System", primary: false },
-      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/Báo cáo QuanLyKyTucXa.pdf", primary: false }
-    ],
-    images: [
-      "assets/img/dormitory_management_system.jpg"
-    ]
-  },
-  "student-mgmt": {
-    title: "Student Management System",
-    kicker: "Software & Database",
-    desc: "Multi-role academic management system with full UML modeling, relational database schema, and structured workflows for students, faculty, and administrators.",
-    highlights: [
-      "4 user roles: student, lecturer, admin, registrar",
-      "UML: class, sequence, activity, use case diagrams",
-      "Normalized relational schema (3NF)",
-      "Grade management and transcript generation"
-    ],
-    chips: ["UML", "MySQL", "Flask", "System Design"],
-    links: [
-      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/lybuida/Student_Management_System", primary: false },
-      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/Bao-cao-CNPM.pdf", primary: false }
-    ],
-    images: [
-      "assets/img/Student Management System.jpg"
-    ]
-  },
   "product-rec": {
     title: "Product Recommendation (E-commerce)",
     kicker: "Python · Big Data",
@@ -251,24 +269,6 @@ const PROJECT_DATA = {
     ],
     images: [
       "assets/img/Product Recommendation.jpg"
-    ]
-  },
-  "sap-crm": {
-    title: "SAP CRM System Analysis",
-    kicker: "Business Analysis · CRM",
-    desc: "In-depth study of SAP CRM module capabilities across sales, service, and marketing. Compared with Salesforce and Microsoft Dynamics, and proposed configuration improvements aligned to business process needs.",
-    highlights: [
-      "SAP CRM module deep-dive: Sales, Service, Marketing",
-      "Competitive comparison: SAP vs Salesforce vs MS Dynamics",
-      "Business process gap identification",
-      "Improvement recommendations with priority matrix"
-    ],
-    chips: ["Business Analysis", "SAP", "CRM", "Competitive Analysis"],
-    links: [
-      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/HTTTQL_CRM_SAP.pdf", primary: false }
-    ],
-    images: [
-      "assets/img/SAP CRM System Analysis.jpg"
     ]
   }
 };
