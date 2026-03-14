@@ -85,7 +85,7 @@ const PROJECT_DATA = {
     ],
     chips: ["Business Analysis", "ERP", "CRM", "Roadmap", "Gap Analysis"],
     links: [
-      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/LyBui_SACO.pdf", primary: false }
+      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/LyBui_SACO.pdf", primary: true }
     ],
     images: [
       "assets/img/saco_crm.jpg"
@@ -103,7 +103,7 @@ const PROJECT_DATA = {
     ],
     chips: ["Use Case", "DFD", "ERD", "UML", "System Design"],
     links: [
-      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/LyBui_PTTKHT.pdf", primary: false }
+      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/LyBui_PTTKHT.pdf", primary: true }
     ],
     images: [
       "assets/img/Management AD.jpg"
@@ -121,7 +121,7 @@ const PROJECT_DATA = {
     ],
     chips: ["Business Analysis", "SAP", "CRM", "Competitive Analysis"],
     links: [
-      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/HTTTQL_CRM_SAP.pdf", primary: false }
+      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/HTTTQL_CRM_SAP.pdf", primary: true }
     ],
     images: [
       "assets/img/SAP CRM System Analysis.jpg"
@@ -139,8 +139,9 @@ const PROJECT_DATA = {
     ],
     chips: ["Flask", "MySQL", "Python", "Jira", "Full-Stack"],
     links: [
-      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/chivtn/Ordering_Food_App", primary: false },
-      { label: "Live Site", icon: "fa-solid fa-globe", href: "https://huyvotan.pythonanywhere.com", primary: true }
+      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/chivtn/Ordering_Food_App", primary: true },
+      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/Ordering Food Web - Report.pdf", primary: false },
+      // { label: "Live Site", icon: "fa-solid fa-globe", href: "https://huyvotan.pythonanywhere.com", primary: true }
     ],
     images: [
       "assets/img/ordering food web.jpg"
@@ -158,11 +159,15 @@ const PROJECT_DATA = {
     ],
     chips: ["MySQL", "DFD", "ERD", "3-Tier Architecture"],
     links: [
-      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/lybuida/Dormitory_Management_System", primary: false },
+      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/lybuida/Dormitory_Management_System", primary: true },
       { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/Báo cáo QuanLyKyTucXa.pdf", primary: false }
     ],
     images: [
-      "assets/img/dormitory_management_system.jpg"
+      "assets/img/dormitory_management_system.jpg",
+      "assets/img/QLKTX 1- Công nghệ.png",
+      "assets/img/QLKTX 2-ERD.png",
+      "assets/img/QLKTX 3-Phân hệ chính của hệ thống.png",
+      "assets/img/QLKTX 4-sql.png"
     ]
   },
   "student-mgmt": {
@@ -177,35 +182,15 @@ const PROJECT_DATA = {
     ],
     chips: ["UML", "MySQL", "Flask", "System Design"],
     links: [
-      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/lybuida/Student_Management_System", primary: false },
+      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/lybuida/Student_Management_System", primary: true },
       { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/Bao-cao-CNPM.pdf", primary: false }
     ],
     images: [
-      "assets/img/Student Management System.jpg"
-    ]
-  },
-  "sales-dashboard": {
-    title: "Sales Performance Dashboard",
-    kicker: "Power BI · Dashboard",
-    desc: "Executive dashboard analyzing revenue, margin, and product-channel performance. Built with DAX measures and a star schema data model to enable fast, consistent aggregations across multiple dimensions.",
-    highlights: [
-      "Star schema data modeling for performance",
-      "DAX measures: YTD, MoM, margin %, channel mix",
-      "Drill-through from exec summary to product detail",
-      "Slicers by region, category, time period"
-    ],
-    chips: ["Power BI", "DAX", "Star Schema", "Data Modeling"],
-    links: [
-      { label: "Live Dashboard", icon: "fa-solid fa-up-right-from-square", href: "https://app.powerbi.com/view?r=eyJrIjoiZGEzZDg1ZGEtZTI1ZC00OTdiLTg2NjYtYTExODBjYjhhYWJhIiwidCI6ImJlODMyOWE3LTcyMTgtNDlhMy05YWMxLWQ3Yjk1NDU2M2YzOSIsImMiOjEwfQ%3D%3D", primary: true }
-    ],
-    images: [
-      "assets/img/Ly Da Bui - sale performance.jpg",
-      "assets/img/supply chain_page-0001.jpg",
-      "assets/img/supply chain_page-0002.jpg",
-      "assets/img/supply chain_page-0003.jpg",
-      "assets/img/supply chain_page-0004.jpg",
-      "assets/img/supply chain_page-0005.jpg",
-      "assets/img/supply chain_page-0006.jpg"
+      "assets/img/Student Management System.jpg",
+      "assets/img/QLKTX 1- Công nghệ.png",
+      "assets/img/QLKTX 2-ERD.png",
+      "assets/img/QLKTX 3-Phân hệ chính của hệ thống.png",
+      "assets/img/QLKTX 4-sql.png"
     ]
   },
   "supply-chain": {
@@ -228,7 +213,64 @@ const PROJECT_DATA = {
       "assets/img/supply chain_page-0003.jpg",
       "assets/img/supply chain_page-0004.jpg",
       "assets/img/supply chain_page-0005.jpg",
-      "assets/img/supply chain_page-0006.jpg"
+    ]
+  },
+  "product-analytics": {
+  title: "Product Analytics",
+  kicker: "SQL · Power BI · E-Wallet",
+  desc: "End-to-end product analysis investigating the drop in bill payment success rate for an e-wallet platform. Combined funnel analysis, error mapping, and user segmentation to identify root causes and propose product improvements.",
+  highlights: [
+    "Success rate KPI tracking across payment flows",
+    "Funnel analysis to detect drop-off points in authentication & confirmation steps",
+    "Error root cause analysis using categorized transaction failures",
+    "User and device segmentation (platform, app version, loyalty tier)"
+  ],
+  chips: ["DAX", "Power BI", "Product Analytics", "Funnel Analysis"],
+  links: [
+    {
+      label: "Report",
+      icon: "fa-solid fa-up-right-from-square",
+      href: "assets/docs/Capstone 2_BuiDaLy.pdf",
+      primary: true
+    }
+  ],
+  images: [
+    "assets/img/Capstone 2_BuiDaLy_page-0001.jpg",
+    "assets/img/Capstone 2_BuiDaLy_page-0002.jpg",
+    "assets/img/Capstone 2_BuiDaLy_page-0003.jpg",
+    "assets/img/Capstone 2_BuiDaLy_page-0004.jpg",
+    "assets/img/Capstone 2_BuiDaLy_page-0005.jpg",
+    "assets/img/Capstone 2_BuiDaLy_page-0006.jpg",
+    "assets/img/Capstone 2_BuiDaLy_page-0007.jpg",
+    "assets/img/Capstone 2_BuiDaLy_page-0008.jpg",
+    "assets/img/Capstone 2_BuiDaLy_page-0009.jpg",
+    "assets/img/Capstone 2_BuiDaLy_page-0010.jpg",
+    "assets/img/Capstone 2_BuiDaLy_page-0011.jpg",
+    "assets/img/Capstone 2_BuiDaLy_page-0012.jpg",
+    "assets/img/Capstone 2_BuiDaLy_page-0013.jpg"
+  ]
+},
+  "sales-dashboard": {
+    title: "Sales Performance Dashboard",
+    kicker: "Power BI · Dashboard",
+    desc: "Executive dashboard analyzing revenue, margin, and product-channel performance. Built with DAX measures and a star schema data model to enable fast, consistent aggregations across multiple dimensions.",
+    highlights: [
+      "Star schema data modeling for performance",
+      "DAX measures: YTD, MoM, margin %, channel mix",
+      "Drill-through from exec summary to product detail",
+      "Slicers by region, category, time period"
+    ],
+    chips: ["Power BI", "DAX", "Star Schema", "Data Modeling"],
+    links: [
+      { label: "Live Dashboard", icon: "fa-solid fa-up-right-from-square", href: "https://app.powerbi.com/view?r=eyJrIjoiZGEzZDg1ZGEtZTI1ZC00OTdiLTg2NjYtYTExODBjYjhhYWJhIiwidCI6ImJlODMyOWE3LTcyMTgtNDlhMy05YWMxLWQ3Yjk1NDU2M2YzOSIsImMiOjEwfQ%3D%3D", primary: true }
+    ],
+    images: [
+      "assets/img/Ly Da Bui - sale performance.jpg",
+      "assets/img/sales electronic_page-0001.jpg",
+      "assets/img/sales electronic_page-0002.jpg",
+      "assets/img/sales electronic_page-0003.jpg",
+      "assets/img/sales electronic_page-0004.jpg",
+      "assets/img/sales electronic_page-0005.jpg"
     ]
   },
   "movie-rec": {
@@ -243,7 +285,7 @@ const PROJECT_DATA = {
     ],
     chips: ["Python", "Pandas", "Collaborative Filtering", "RMSE", "MovieLens"],
     links: [
-      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/lybuida/Movie_Recommendation_System", primary: false },
+      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/lybuida/Movie_Recommendation_System", primary: true },
       { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/Movie_Recommendation_System.pdf", primary: false },
       { label: "Slides", icon: "fa-regular fa-file-lines", href: "assets/docs/Movie_Recommendation_System_slide.pdf", primary: false }
     ],
@@ -263,9 +305,9 @@ const PROJECT_DATA = {
     ],
     chips: ["Python", "Similarity Metrics", "NDCG", "A/B Testing", "Big Data"],
     links: [
-      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/lybuida/Product_Recommendation_E-commerce", primary: false },
-      { label: "Slides", icon: "fa-regular fa-file-lines", href: "assets/docs/OU_DB2_Group 3_Presentation-Slide.pdf", primary: false },
-      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/OU_DB2_Group 3_Final Report.pdf", primary: false }
+      { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/lybuida/Product_Recommendation_E-commerce", primary: true },
+      { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/OU_DB2_Group 3_Final Report.pdf", primary: false },
+      { label: "Slides", icon: "fa-regular fa-file-lines", href: "assets/docs/OU_DB2_Group 3_Presentation-Slide.pdf", primary: false }
     ],
     images: [
       "assets/img/Product Recommendation.jpg"
@@ -431,16 +473,17 @@ document.getElementById('pgalleryNext').addEventListener('click', () => {
 
 // ── ATTACH CLICK TO PROJECT CARDS ──
 const cardProjectMap = {
-  0: 'sales-dashboard',
-  1: 'supply-chain',
-  2: 'movie-rec',
-  3: 'saco',
-  4: 'classified-ads',
-  5: 'food-ordering',
-  6: 'dormitory',
-  7: 'student-mgmt',
-  8: 'product-rec',
-  9: 'sap-crm'
+  0: 'saco',
+  1: 'classified-ads',
+  2: 'sap-crm',
+  3: 'food-ordering',
+  4: 'dormitory',
+  5: 'student-mgmt',
+  6: 'supply-chain',
+  7: 'product-analytics',
+  8: 'sales-dashboard',
+  9: 'movie-rec',
+  10: 'product-rec',
 };
 
 document.querySelectorAll('.proj-card').forEach((card, idx) => {
