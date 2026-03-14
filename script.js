@@ -53,7 +53,7 @@ if (line1 && line2 && line3) {
   const lines = [
     { el: line1, text: "HI," },
     { el: line2, text: "i'm" },
-    { el: line3, text: "LY DA BUI" }
+    { el: line3, text: "BUI DA LY" }
   ];
   const typingSpeed = 180, lineDelay = 220, loopDelay = 900;
   let lineIndex = 0, charIndex = 0;
