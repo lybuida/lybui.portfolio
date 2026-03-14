@@ -69,10 +69,10 @@
 /* Inner layout */
 .pmodal-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   height: calc(90vh - 2px);
   max-height: 680px;
   overflow: hidden;
+  grid-template-columns: minmax(0, 1.15fr) minmax(360px, .85fr);
 }
 
 /* ── LEFT: Gallery ── */
@@ -339,3 +339,5 @@
   .pmodal-box { max-height: 92vh; overflow-y: auto; }
   .pmodal-info { padding: 24px 20px; }
 }
+
+
