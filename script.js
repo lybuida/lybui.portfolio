@@ -1,77 +1,11 @@
-// ── YEAR ──
 document.getElementById('yr').textContent = new Date().getFullYear();
-
-// ── CURSOR ──
-const cur = document.getElementById('cursor');
-const ring = document.getElementById('cursorRing');
-let mx = 0, my = 0, rx = 0, ry = 0;
-document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-function animCursor() {
-  cur.style.left = mx + 'px'; cur.style.top = my + 'px';
-  rx += (mx - rx) * .12; ry += (my - ry) * .12;
-  ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-  requestAnimationFrame(animCursor);
-}
-animCursor();
-
-// ── NAV SCROLL ──
-const navEl = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  navEl.classList.toggle('scrolled', window.scrollY > 20);
-});
-
-// ── REVEAL ──
-const reveals = document.querySelectorAll('.reveal');
-const obs = new IntersectionObserver(entries => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), i * 60);
-      obs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.1 });
-reveals.forEach(r => obs.observe(r));
-
-// ── FILTER ──
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const f = btn.dataset.filter;
-    document.querySelectorAll('.proj-card').forEach(card => {
-      card.classList.toggle('hidden', f !== 'all' && card.dataset.category !== f);
-    });
-  });
-});
-
-// ── TYPING HERO ──
-const line1 = document.getElementById("line1");
-const line2 = document.getElementById("line2");
-const line3 = document.getElementById("line3");
-
-if (line1 && line2 && line3) {
-  const lines = [
-    { el: line1, text: "HI," },
-    { el: line2, text: "i'm" },
-    { el: line3, text: "BUI DA LY" }
-  ];
-  const typingSpeed = 180, lineDelay = 220, loopDelay = 900;
-  let lineIndex = 0, charIndex = 0;
-  function resetLines() { lines.forEach(l => { l.el.textContent = ""; }); lineIndex = 0; charIndex = 0; }
-  function typeLoop() {
-    if (lineIndex >= lines.length) { setTimeout(() => { resetLines(); typeLoop(); }, loopDelay); return; }
-    const cur = lines[lineIndex];
-    cur.el.textContent = cur.text.slice(0, charIndex + 1);
-    charIndex++;
-    if (charIndex < cur.text.length) setTimeout(typeLoop, typingSpeed);
-    else { lineIndex++; charIndex = 0; setTimeout(typeLoop, lineDelay); }
-  }
-  resetLines(); setTimeout(typeLoop, 500);
-}
-
-// ── PROJECT DATA ──
-// Each project maps to its card via data-project-id attribute
-// Images array: primary + additional screenshots (add more paths as needed)
+const menuToggle=document.getElementById('menuToggle'), navLinks=document.getElementById('navLinks');
+menuToggle.addEventListener('click',()=>{let open=navLinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+const themeButton=document.getElementById('themeButton');
+themeButton.addEventListener('click',()=>{document.body.classList.toggle('night');themeButton.innerHTML=document.body.classList.contains('night')?'<i class="fa-regular fa-moon"></i>':'<i class="fa-regular fa-sun"></i>';});
+const navItems=[...navLinks.querySelectorAll('a')]; const sections=[...document.querySelectorAll('main section[id]')];
+window.addEventListener('scroll',()=>{const y=scrollY+160;let current='home';for(const section of sections)if(section.offsetTop<=y)current=section.id;navItems.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current));},{passive:true});
 const PROJECT_DATA = {
   "saco": {
     title: "Information System for SACO",
@@ -79,9 +13,9 @@ const PROJECT_DATA = {
     desc: "Analyzed SACO's existing information systems, compared enterprise CRM/ERP solutions, identified operational gaps, and proposed a phased digital transformation roadmap aligned to business priorities.",
     highlights: [
       "AS-IS / TO-BE process analysis",
-      "Vendor comparison: SAP, Salesforce, Oracle",
+      "Compared packaged business-software alternatives and implementation options",
       "Gap analysis mapped to business requirements",
-      "Phased implementation roadmap with ROI framing"
+      "Reviewed phased implementation choices and operational fit"
     ],
     chips: ["Business Analysis", "ERP", "CRM", "Roadmap", "Gap Analysis"],
     links: [
@@ -115,9 +49,9 @@ const PROJECT_DATA = {
     desc: "In-depth study of SAP CRM module capabilities across sales, service, and marketing. Compared with Salesforce and Microsoft Dynamics, and proposed configuration improvements aligned to business process needs.",
     highlights: [
       "SAP CRM module deep-dive: Sales, Service, Marketing",
-      "Competitive comparison: SAP vs Salesforce vs MS Dynamics",
+      "Compared SAP CRM with Oracle CRM",
       "Business process gap identification",
-      "Improvement recommendations with priority matrix"
+      "Reviewed implementation considerations and potential applications"
     ],
     chips: ["Business Analysis", "SAP", "CRM", "Competitive Analysis"],
     links: [
@@ -135,7 +69,7 @@ const PROJECT_DATA = {
       "Role-based access: customer, restaurant, admin",
       "Cart, payment flow, and order tracking",
       "Admin dashboard: menu, orders, analytics",
-      "Deployed live on PythonAnywhere"
+      "Documented application deployment and delivery activities"
     ],
     chips: ["Flask", "MySQL", "Python", "Jira", "Full-Stack"],
     links: [
@@ -164,9 +98,9 @@ const PROJECT_DATA = {
     ],
     images: [
       "assets/img/dormitory_management_system.jpg",
-      "assets/img/QLKTX 1- Công nghệ.png",
+      "assets/img/QLKTX 1-Cong_nghe.png",
       "assets/img/QLKTX 2-ERD.png",
-      "assets/img/QLKTX 3-Phân hệ chính của hệ thống.png",
+      "assets/img/QLKTX 3-Phan_he_chinh_cua_he_thong.png",
       "assets/img/QLKTX 4-sql.png"
     ]
   },
@@ -198,10 +132,10 @@ const PROJECT_DATA = {
     kicker: "Power BI · Logistics",
     desc: "Operational dashboard surfacing delivery performance, return rates, and loss drivers across a logistics network. Designed to help ops managers quickly identify bottlenecks and take corrective action.",
     highlights: [
-      "On-time delivery rate tracking by region & carrier",
-      "Return and damage loss driver breakdown",
+      "On-time delivery rate by geography and shipping mode",
+      "Returns, late deliveries, and profitability breakdowns",
       "Trend analysis: weekly and monthly comparisons",
-      "Alert-style KPI cards for threshold breaches"
+      "Operational KPI cards and regional comparisons"
     ],
     chips: ["Power BI", "DAX", "Logistics", "KPI Design"],
     links: [
@@ -294,204 +228,54 @@ const PROJECT_DATA = {
     ]
   },
   "product-rec": {
-    title: "Product Recommendation (E-commerce)",
-    kicker: "Python · Big Data",
-    desc: "Built a product recommendation pipeline for e-commerce using similarity-based filtering. Designed evaluation metrics and outlined an A/B testing framework for production deployment.",
-    highlights: [
-      "Item-item similarity with cosine distance",
-      "Precision@K and NDCG evaluation metrics",
-      "A/B testing framework design",
-      "Big Data course project — Samsung Innovation Campus"
-    ],
-    chips: ["Python", "Similarity Metrics", "NDCG", "A/B Testing", "Big Data"],
+    title: "AI-Powered Product Recommendation",
+    kicker: "Samsung Innovation Campus · AI / ML",
+    desc: "Team project evaluating machine-learning approaches for e-commerce product recommendations, using a public product dataset and a Flask-based demonstration interface. My documented role focused on model evaluation and testing.",
+    highlights: ["Evaluated classification and recommendation models", "Worked on testing and evaluation within a cross-functional project team", "Explored KNN, Random Forest and similarity-based recommendations", "Prepared project documentation and presentation"],
+    chips: ["Machine Learning", "Model Evaluation", "Python", "Flask"],
     links: [
       { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/lybuida/Product_Recommendation_E-commerce", primary: true },
       { label: "Report", icon: "fa-regular fa-file-lines", href: "assets/docs/OU_DB2_Group 3_Final Report.pdf", primary: false },
       { label: "Slides", icon: "fa-regular fa-file-lines", href: "assets/docs/OU_DB2_Group 3_Presentation-Slide.pdf", primary: false }
     ],
-    images: [
-      "assets/img/Product Recommendation.jpg"
-    ]
+    images: ["assets/img/Product Recommendation.jpg"]
+
   }
 };
 
-// ── BUILD & INJECT MODAL HTML ──
-function buildModal() {
-  const modal = document.createElement('div');
-  modal.id = 'proj-modal';
-  modal.className = 'pmodal-overlay';
-  modal.setAttribute('aria-modal', 'true');
-  modal.setAttribute('role', 'dialog');
-  modal.innerHTML = `
-    <div class="pmodal-box">
-      <button class="pmodal-close" id="pmodalClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
 
-      <div class="pmodal-inner">
-        <!-- LEFT: Gallery -->
-        <div class="pmodal-gallery">
-          <div class="pgallery-main">
-            <img id="pgalleryImg" src="" alt="" />
-            <button class="pgallery-nav prev" id="pgalleryPrev" aria-label="Previous image">
-              <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <button class="pgallery-nav next" id="pgalleryNext" aria-label="Next image">
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
-            <div class="pgallery-counter" id="pgalleryCounter">1 / 1</div>
-          </div>
-          <div class="pgallery-thumbs" id="pgalleryThumbs"></div>
-        </div>
-
-        <!-- RIGHT: Info -->
-        <div class="pmodal-info">
-          <div class="pmodal-kicker" id="pmodalKicker"></div>
-          <h2 class="pmodal-title" id="pmodalTitle"></h2>
-          <p class="pmodal-desc" id="pmodalDesc"></p>
-
-          <div class="pmodal-highlights" id="pmodalHighlights">
-            <div class="pmodal-highlights-label">Highlights</div>
-            <ul id="pmodalHighlightList"></ul>
-          </div>
-
-          <div class="pmodal-chips" id="pmodalChips"></div>
-
-          <div class="pmodal-links" id="pmodalLinks"></div>
-        </div>
-      </div>
-    </div>
-  `;
-  document.body.appendChild(modal);
-  return modal;
+const cards = [
+ {id:'product-analytics',category:'bi',label:'Data',title:'E-Wallet Product Analytics',desc:'Investigated a drop in bill-payment success rates through funnel, error, and user-segment analysis.',img:'assets/img/Capstone 2_BuiDaLy_page-0001.jpg'},
+ {id:'food-ordering',category:'software',label:'Web / PM',title:'Online Food Ordering System',desc:'A full-stack system with project charter, WBS, schedules, risk tracking, and sprint delivery.',img:'assets/img/ordering food web.jpg'},
+ {id:'product-rec',category:'ai recsys',label:'AI',title:'AI Product Recommendation',desc:'Machine-learning recommendation project with model evaluation and Flask integration.',img:'assets/img/Product Recommendation.jpg'},
+ {id:'classified-ads',category:'ba',label:'Business',title:'Classified Ads System',desc:'Requirements analysis and structured system design with workflows, UML, and database models.',img:'assets/img/Management AD.jpg'},
+ {id:'sap-crm',category:'ba',label:'Business',title:'SAP CRM Analysis',desc:'Analyzed CRM capabilities and compared business software alternatives.',img:'assets/img/SAP CRM System Analysis.jpg'},
+ {id:'saco',category:'ba',label:'Business',title:'SACO Information Systems',desc:'Analyzed business systems and explored options for digital transformation.',img:'assets/img/saco_crm.jpg'},
+ {id:'supply-chain',category:'bi',label:'Data',title:'Supply Chain Dashboard',desc:'Power BI reporting for delivery performance, returns, and profitability.',img:'assets/img/Logistics.jpg'},
+ {id:'sales-dashboard',category:'bi',label:'Data',title:'Sales Performance Dashboard',desc:'Sales, product, and customer performance analysis with Power BI.',img:'assets/img/Ly Da Bui - sale performance.jpg'},
+ {id:'movie-rec',category:'recsys ai',label:'AI',title:'Movie Recommendation System',desc:'Compared content-based and collaborative recommendation approaches on MovieLens.',img:'assets/img/movie recommendation system.jpg'},
+ {id:'student-mgmt',category:'software',label:'System',title:'Student Management System',desc:'Academic workflows, role-based features, and UML system modeling.',img:'assets/img/Student Management System.jpg'},
+ {id:'dormitory',category:'software',label:'System',title:'Dormitory Management System',desc:'Room management, billing workflows, and database architecture.',img:'assets/img/dormitory_management_system.jpg'}
+];
+const grid=document.getElementById('project-results');
+function renderProjects(filter='all'){
+ const visible=cards.filter(c=>filter==='all'||c.category.split(' ').includes(filter));
+ grid.innerHTML=visible.map(c=>`<article class="project-card" data-project-id="${c.id}" tabindex="0" role="button" aria-label="View ${c.title} project details"><div class="project-image"><img src="${c.img}" alt="${c.title}" loading="lazy" onerror="this.classList.add('broken-img')"><span>${c.label}</span></div><div class="project-info"><h3>${c.title}</h3><p>${c.desc}</p><span class="project-open"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project <i class="fa-solid fa-arrow-right"></i></span></div></article>`).join('');
+ grid.querySelectorAll('.project-card').forEach(c=>{c.addEventListener('click',()=>openModal(c.dataset.projectId));c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openModal(c.dataset.projectId);}});});
 }
-
-// ── MODAL STATE ──
-let currentImages = [];
-let currentImgIdx = 0;
-
-function setGalleryImage(idx) {
-  const img = document.getElementById('pgalleryImg');
-  const counter = document.getElementById('pgalleryCounter');
-  const thumbs = document.getElementById('pgalleryThumbs').querySelectorAll('.pgallery-thumb');
-
-  img.style.opacity = '0';
-  setTimeout(() => {
-    img.src = currentImages[idx];
-    img.alt = `Project image ${idx + 1}`;
-    img.style.opacity = '1';
-  }, 150);
-
-  counter.textContent = `${idx + 1} / ${currentImages.length}`;
-
-  thumbs.forEach((t, i) => t.classList.toggle('active', i === idx));
-
-  const prevBtn = document.getElementById('pgalleryPrev');
-  const nextBtn = document.getElementById('pgalleryNext');
-  prevBtn.style.display = currentImages.length > 1 ? 'flex' : 'none';
-  nextBtn.style.display = currentImages.length > 1 ? 'flex' : 'none';
-  document.getElementById('pgalleryCounter').style.display = currentImages.length > 1 ? 'block' : 'none';
-}
-
-function openModal(projectId) {
-  const data = PROJECT_DATA[projectId];
-  if (!data) return;
-
-  const modal = document.getElementById('proj-modal');
-
-  // Populate text
-  document.getElementById('pmodalKicker').textContent = data.kicker;
-  document.getElementById('pmodalTitle').textContent = data.title;
-  document.getElementById('pmodalDesc').textContent = data.desc;
-
-  // Highlights
-  const ul = document.getElementById('pmodalHighlightList');
-  ul.innerHTML = data.highlights.map(h => `<li>${h}</li>`).join('');
-
-  // Chips
-  const chipsEl = document.getElementById('pmodalChips');
-  chipsEl.innerHTML = data.chips.map(c => `<span class="chip">${c}</span>`).join('');
-
-  // Links
-  const linksEl = document.getElementById('pmodalLinks');
-  linksEl.innerHTML = data.links.map(l =>
-    `<a class="link-btn ${l.primary ? 'prim' : 'ghost-btn'}" href="${l.href}" target="_blank" rel="noopener">
-      <i class="${l.icon}"></i> ${l.label}
-    </a>`
-  ).join('');
-
-  // Gallery
-  currentImages = data.images;
-  currentImgIdx = 0;
-
-  const thumbsEl = document.getElementById('pgalleryThumbs');
-  thumbsEl.innerHTML = currentImages.length > 1
-    ? currentImages.map((src, i) =>
-        `<img class="pgallery-thumb${i === 0 ? ' active' : ''}" src="${src}" data-idx="${i}" alt="thumb ${i+1}" />`
-      ).join('')
-    : '';
-
-  thumbsEl.querySelectorAll('.pgallery-thumb').forEach(t => {
-    t.addEventListener('click', () => {
-      currentImgIdx = parseInt(t.dataset.idx);
-      setGalleryImage(currentImgIdx);
-    });
-  });
-
-  setGalleryImage(0);
-
-  // Show
-  modal.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-  const modal = document.getElementById('proj-modal');
-  modal.classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-// ── INIT MODAL ──
-buildModal();
-
-document.getElementById('pmodalClose').addEventListener('click', closeModal);
-document.getElementById('proj-modal').addEventListener('click', e => {
-  if (e.target === e.currentTarget) closeModal();
+renderProjects();
+document.querySelectorAll('.filter-btn').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderProjects(b.dataset.filter);}));
+document.getElementById('gridView').onclick=()=>{grid.classList.remove('list-mode');document.getElementById('gridView').classList.add('active');document.getElementById('listView').classList.remove('active');};
+document.getElementById('listView').onclick=()=>{grid.classList.add('list-mode');document.getElementById('listView').classList.add('active');document.getElementById('gridView').classList.remove('active');};
+document.getElementById('viewAll')?.addEventListener('click', () => {
+  document.querySelector('[data-filter="all"]')?.click();
 });
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeModal();
-  if (e.key === 'ArrowLeft') { currentImgIdx = (currentImgIdx - 1 + currentImages.length) % currentImages.length; setGalleryImage(currentImgIdx); }
-  if (e.key === 'ArrowRight') { currentImgIdx = (currentImgIdx + 1) % currentImages.length; setGalleryImage(currentImgIdx); }
-});
-
-document.getElementById('pgalleryPrev').addEventListener('click', () => {
-  currentImgIdx = (currentImgIdx - 1 + currentImages.length) % currentImages.length;
-  setGalleryImage(currentImgIdx);
-});
-document.getElementById('pgalleryNext').addEventListener('click', () => {
-  currentImgIdx = (currentImgIdx + 1) % currentImages.length;
-  setGalleryImage(currentImgIdx);
-});
-
-// ── ATTACH CLICK TO PROJECT CARDS ──
-const cardProjectMap = {
-  0: 'saco',
-  1: 'classified-ads',
-  2: 'sap-crm',
-  3: 'food-ordering',
-  4: 'dormitory',
-  5: 'student-mgmt',
-  6: 'supply-chain',
-  7: 'product-analytics',
-  8: 'sales-dashboard',
-  9: 'movie-rec',
-  10: 'product-rec',
-};
-
-document.querySelectorAll('.proj-card').forEach((card, idx) => {
-  card.style.cursor = 'none';
-  card.addEventListener('click', e => {
-    // Don't open modal if clicking a link directly
-    if (e.target.closest('.link-btn')) return;
-    const pid = card.dataset.projectId || cardProjectMap[idx];
-    if (pid) openModal(pid);
-  });
-});
+const modal=document.createElement('div');modal.className='pmodal-overlay';modal.id='proj-modal';modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.setAttribute('aria-label','Project details');
+modal.innerHTML=`<div class="pmodal-box"><button class="pmodal-close" aria-label="Close project details"><i class="fa-solid fa-xmark"></i></button><div class="pmodal-inner"><div class="pmodal-gallery"><div class="pgallery-main"><img id="pgalleryImg" alt="Project preview"><button class="pgallery-nav prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button><button class="pgallery-nav next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button><span class="pgallery-counter"></span></div></div><div class="pmodal-info"><span class="pmodal-kicker"></span><h2 class="pmodal-title"></h2><p class="pmodal-desc"></p><div class="pmodal-highlights"><span class="pmodal-highlights-label">PROJECT HIGHLIGHTS</span><ul></ul></div><div class="pmodal-chips"></div><div class="pmodal-links"></div></div></div></div>`;
+document.body.appendChild(modal);
+let gallery=[],galleryIdx=0, lastFocus;
+function showImage(i){if(!gallery.length)return;galleryIdx=(i+gallery.length)%gallery.length;modal.querySelector('#pgalleryImg').src=gallery[galleryIdx];modal.querySelector('.pgallery-counter').textContent=`${galleryIdx+1} / ${gallery.length}`;modal.querySelectorAll('.pgallery-nav').forEach(b=>b.hidden=gallery.length<2);}
+function openModal(id){const d=PROJECT_DATA[id];if(!d)return;lastFocus=document.activeElement;modal.querySelector('.pmodal-kicker').textContent=d.kicker;modal.querySelector('.pmodal-title').textContent=d.title;modal.querySelector('.pmodal-desc').textContent=d.desc;modal.querySelector('.pmodal-highlights ul').replaceChildren(...d.highlights.map(t=>{const li=document.createElement('li');li.textContent=t;return li;}));modal.querySelector('.pmodal-chips').replaceChildren(...d.chips.map(t=>{const el=document.createElement('span');el.className='chip';el.textContent=t;return el;}));const links=modal.querySelector('.pmodal-links');links.replaceChildren(...d.links.map(l=>{const a=document.createElement('a');a.className='modal-link '+(l.primary?'primary':'');a.href=l.href;a.target='_blank';a.rel='noopener';const i=document.createElement('i');i.className=l.icon;a.append(i,document.createTextNode(' '+l.label));return a;}));gallery=d.images?.length?d.images:[];showImage(0);modal.classList.add('open');document.body.classList.add('modal-open');modal.querySelector('.pmodal-close').focus();}
+function closeModal(){modal.classList.remove('open');document.body.classList.remove('modal-open');lastFocus?.focus();}
+modal.querySelector('.pmodal-close').onclick=closeModal;modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});modal.querySelector('.pgallery-nav.prev').onclick=()=>showImage(galleryIdx-1);modal.querySelector('.pgallery-nav.next').onclick=()=>showImage(galleryIdx+1);
+document.addEventListener('keydown',e=>{if(!modal.classList.contains('open'))return;if(e.key==='Escape')closeModal();if(e.key==='ArrowLeft')showImage(galleryIdx-1);if(e.key==='ArrowRight')showImage(galleryIdx+1);});

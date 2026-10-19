@@ -1,606 +1,421 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Bui Da Ly — Product · BA · Data</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-          rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"/>
-    <link rel="stylesheet" href="modal.css"/>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <meta content="Bui Da Ly — project management, product thinking, business analysis and digital transformation."
+          name="description"/>
+    <title>Bui Da Ly | Business × Technology</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+          rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet"/>
+    <link href="modal.css" rel="stylesheet"/>
 </head>
 <body>
+<header class="site-header" id="nav">
+    <div class="nav-wrap">
+        <a class="brand" href="#home">Bui Da Ly</a>
+        <button aria-expanded="false" aria-label="Open navigation" class="menu-toggle" id="menuToggle"><i
+                class="fa-solid fa-bars"></i></button>
+        <nav aria-label="Main navigation" class="nav-links" id="navLinks"><a class="active" href="#home">Home</a><a
+                href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a
+                href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+        <div class="nav-actions"><a class="button dark small" href="#contact">Let's Talk <i
+                class="fa-solid fa-arrow-right"></i></a>
+            <button aria-label="Toggle dark mode" class="theme-button" id="themeButton" title="Toggle color theme"><i
+                    class="fa-regular fa-sun"></i></button>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="hero layout-section" id="home">
+        <div class="hero-glow one"></div>
+        <div class="hero-glow two"></div>
+        <div class="layout-container hero-layout">
+            <div class="hero-copy">
+                <div class="eyebrow hero-eyebrow">PROJECT MANAGEMENT <span>·</span> PRODUCT OWNER <span>·</span> DIGITAL
+                    TRANSFORMATION<span>·</span> AI
+                </div>
+                <h1>Turning Business<br/>Challenges Into <span class="gradient-text">Digital Solutions</span></h1>
+                <p class="hero-description">I connect business needs with technology to solve operational pain points,
+                    streamline workflows, and support meaningful digital transformation.</p>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-<div class="grid-bg" aria-hidden="true"></div>
-<div class="glow" aria-hidden="true"></div>
-<div class="glow2" aria-hidden="true"></div>
+<div class="hero-cta">
+    <a class="button dark" href="#projects">
+        View My Work
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
 
-<!-- NAV -->
-<nav id="nav">
-    <a class="nav-logo" href="#home"><span>./</span>buidaly</a>
-    <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a class="nav-resume" href="assets/docs/resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
-</nav>
+    <a class="button contact-outline" href="#contact">
+        <i class="fa-regular fa-envelope"></i>
+        Contact Me
+    </a>
+</div>
 
-<!-- HERO -->
-<section class="hero" id="home">
-    <div class="container">
-        <div class="hero-inner">
-            <div>
-                <div class="hero-meta reveal">Tech · Business · Data</div>
-                <h1 class="hero-name reveal">
-                    <span class="typing-line line-1" id="line1"></span><br>
-                    <span class="typing-line outline" id="line2"></span><br>
-                    <span class="typing-line line-3" id="line3"></span>
-                </h1>
-                <div class="hero-title-line reveal">MIS · Final Year · PO Intern (5 months)</div>
-                <p class="hero-desc reveal">
-                    Product-minded <strong>MIS student</strong> with hands-on experience in
-                    SaaS product development, business analysis, and data-driven thinking.<br>
-                    Interested in building digital products that <strong> solve real user problems while creating value
-                    for the business.</strong>
+                <div class="hero-stats">
+                    <div><strong>9</strong><span>AI &amp; digital initiatives<br/>coordinated</span></div>
+                    <div><strong>3</strong><span>SaaS products<br/>supported</span></div>
+                    <div><strong>2</strong><span>Professional internship<br/>experiences</span></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="portrait-backdrop"></div>
+                <div class="portrait-frame"><img alt="Portrait of Bui Da Ly"
+                                                 onerror="this.classList.add('missing-photo');this.nextElementSibling.hidden=false"
+                                                 src="assets/img/avar5.png"/>
+                    <div class="portrait-placeholder" hidden="">
+                    </div>
+                    <div class="photo-caption"><b>Bui Da Ly</b><span>Business × Technology<br/>Digital Transformation</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ABOUT ME -->
+<section class="about layout-section" id="about">
+    <div class="layout-container about-layout">
+
+        <!-- ABOUT INTRO -->
+        <div class="section-intro">
+            <div class="section-label">
+                <span class="tiny-circle"></span>
+                ABOUT ME
+                <span class="rule"></span>
+            </div>
+
+            <h2>
+                How I <span class="gradient-text">Think & Work</span>
+            </h2>
+
+
+<p>
+    <em>"The best solutions solve real business pain points."</em>
+</p>
+<p class="muted">I take a SMART approach — Strategic, Methodical, Adaptable, Resourceful, and Thoughtful.</p>
+        </div>
+
+        <!-- SMART WORKING APPROACH -->
+        <div class="smart-grid">
+
+            <!-- S - STRATEGIC -->
+            <article class="smart-card lavender">
+                <strong>S</strong>
+                <i class="fa-solid fa-bullseye"></i>
+                <h3>Strategic</h3>
+                <p>
+                    I see the bigger picture and align solutions
+                    with business goals.
                 </p>
+            </article>
 
-                <div class="hero-actions reveal">
-                    <a class="btn-primary" href="#projects"><i class="fa-solid fa-arrow-right"></i> View Work</a>
-                    <a class="btn-ghost" href="#contact">Get in Touch</a>
-                </div>
-            </div>
-
-            <aside class="reveal">
-                <div class="hero-portrait-wrap">
-                    <img src="assets/img/avar5.png" alt="Ly Da Bui portrait" class="hero-portrait"/>
-                </div>
-            </aside>
-        </div>
-    </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ABOUT -->
-<section id="about">
-    <div class="container">
-        <div class="sec-header reveal">
-            <div class="sec-eyebrow">About</div>
-            <h2 class="sec-title">STRUCTURE IN<br><span class="sec-title-dim">CHAOS.</span></h2>
-            <p class="sec-sub">Bringing clarity to products, workflows, and decisions.</p>
-        </div>
-
-        <div class="about-v2">
-            <div class="about-main reveal">
-                <p class="about-lead">
-                    I come from a <strong>Management Information Systems</strong> background, where business thinking,
-                    system logic, and data work together. I enjoy turning unclear requirements into
-                    structured flows, usable features, and product decisions that teams can confidently build on.
+            <!-- M - METHODICAL -->
+            <article class="smart-card blue">
+                <strong>M</strong>
+                <i class="fa-solid fa-list-check"></i>
+                <h3>Methodical</h3>
+                <p>
+                    I turn complex problems into clear,
+                    actionable plans.
                 </p>
+            </article>
 
-                <div class="about-highlights">
-                    <div class="about-highlight">
-                        <div class="about-highlight-head">
-                            <span class="about-highlight-icon"><i class="fa-solid fa-lightbulb"></i></span>
-                            <div class="about-highlight-title">Product Thinking</div>
-                        </div>
-                        <div class="about-highlight-text">
-                            I break down messy ideas into clear requirements, workflows, and feature logic.
-                        </div>
-                    </div>
+            <!-- A - ADAPTABLE -->
+            <article class="smart-card mint">
+                <strong>A</strong>
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <h3>Adaptable</h3>
+                <p>
+                    I embrace change and collaborate
+                    to overcome challenges.
+                </p>
+            </article>
 
-                    <div class="about-highlight">
-                        <div class="about-highlight-head">
-                            <span class="about-highlight-icon"><i class="fa-solid fa-diagram-project"></i></span>
-                            <div class="about-highlight-title">Business × Systems</div>
-                        </div>
-                        <div class="about-highlight-text">
-                            I connect user needs, operational goals, and system structure to make products more
-                            practical.
-                        </div>
-                    </div>
+            <!-- R - RESOURCEFUL -->
+            <article class="smart-card peach">
+                <strong>R</strong>
+                <i class="fa-regular fa-lightbulb"></i>
+                <h3>Resourceful</h3>
+                <p>
+                    I find practical solutions to
+                    real business pain points.
+                </p>
+            </article>
 
-                    <div class="about-highlight">
-                        <div class="about-highlight-head">
-                            <span class="about-highlight-icon"><i class="fa-solid fa-chart-line"></i></span>
-                            <div class="about-highlight-title">Data-Aware Decisions</div>
-                        </div>
-                        <div class="about-highlight-text">
-                            I use data to support direction, validate assumptions, and sharpen product thinking.
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- T - THOUGHTFUL -->
+            <article class="smart-card lilac">
+                <strong>T</strong>
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h3>Thoughtful</h3>
+                <p>
+                    I balance user needs, business value,
+                    and long-term impact.
+                </p>
+            </article>
 
-            <aside class="about-panel reveal">
-                <div class="about-panel-label">Quick Facts</div>
-
-                <div class="about-facts">
-                    <div class="about-fact">
-                        <span class="about-fact-n">5M</span>
-                        <span class="about-fact-l">PO Intern Experience</span>
-                    </div>
-                    <div class="about-fact">
-                        <span class="about-fact-n">3</span>
-                        <span class="about-fact-l">SaaS Products</span>
-                    </div>
-                    <div class="about-fact">
-                        <span class="about-fact-n">10+</span>
-                        <span class="about-fact-l">Projects</span>
-                    </div>
-                    <div class="about-fact">
-                        <span class="about-fact-n">3.5</span>
-                        <span class="about-fact-l">GPA / 4.0</span>
-                    </div>
-                    <div class="about-fact">
-                        <span class="about-fact-n">6</span>
-                        <span class="about-fact-l">Scholarships</span>
-                    </div>
-                    <div class="about-fact">
-                        <span class="about-fact-n">670</span>
-                        <span class="about-fact-l">Toeic</span>
-                    </div>
-                </div>
-
-                <div class="about-mini-block">
-                    <div class="about-mini-label">Core Tools</div>
-                    <p>Jira · Draw.io · Figma · SQL · Power BI · Python</p>
-                </div>
-            </aside>
         </div>
     </div>
 </section>
-<div class="divider"></div>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-    <div class="container">
-        <div class="sec-header reveal">
-            <div class="sec-eyebrow">Experience</div>
-            <h2 class="sec-title">PRODUCT<br>OWNERSHIP.</h2>
-        </div>
+    <section class="experience layout-section" id="experience">
+        <div class="layout-container experience-layout">
+            <div class="section-intro">
+                <div class="section-label"><span class="tiny-circle"></span> EXPERIENCE <span class="rule"></span></div>
+                <h2>Turning Plans<br/>Into <span class="gradient-text">Progress</span></h2>
+                <p class="muted">Hands-on experience coordinating AI and digital projects, supporting SaaS products, and
+                    connecting business stakeholders with delivery teams.</p>
+            </div>
+            <div class="timeline" id="experience-list">
+                <article class="timeline-entry">
+                    <div class="timeline-date">Apr 2026 – Present</div>
+                    <div class="timeline-marker"></div>
+                    <div class="experience-card">
+                        <div class="experience-card-main">
+                            <div class="company-head"><span class="company-logo digi"><img alt="DIGI-TEXX logo"
+                                                                                           loading="lazy"
+                                                                                           src="assets/img/logo/digitexx_logo.png"/></span>
+                                <div><h3>DIGI-TEXX</h3><span>Project Management Intern</span></div>
+                                <span class="tag-label">Internship</span></div>
+                            <ul>
+                                <li>Coordinated delivery across 9 AI and digital initiatives with Business, Operations,
+                                    Engineering, and QA teams.
+                                </li>
+                                <li>Translated business needs into requirements, process flows, and acceptance
+                                    criteria.
+                                </li>
+                                <li>Tracked milestones, dependencies, and risks; supported testing, UAT, stakeholder
+                                    feedback, and handover.
+                                </li>
+                                <li>Supported process improvement and solution discovery for AI-enabled automation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="timeline-entry">
+                    <div class="timeline-date">Sep 2025 - Jan 2026</div>
+                    <div class="timeline-marker"></div>
+                    <div class="experience-card">
+                        <div class="experience-card-main">
+                            <div class="company-head"><span class="company-logo owl"><img
+                                    alt="Golden Owl Solutions logo" loading="lazy" src="assets/img/logo/go_logo.webp"/></span>
+                                <div><h3>Golden Owl Solutions</h3><span>Product Owner Intern</span></div>
+                                <span class="tag-label">Internship</span></div>
+                            <ul>
+                                <li>Supported product development across 3 SaaS products, from requirements to sprint
+                                    delivery.
+                                </li>
+                                <li>Prepared user stories, acceptance criteria, product documentation, and process
+                                    flows.
+                                </li>
+                                <li>Collaborated with developers, designers, QA, and stakeholders to clarify needs and
+                                    resolve blockers.
+                                </li>
+                                <li>Contributed to product research, wireframing, and feature refinement.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
 
-        <div class="exp-block reveal">
-            <div class="exp-block-top">
+<article class="timeline-entry education-entry">
+    <div class="timeline-date">Education</div>
+    <div class="timeline-marker"></div>
+
+    <div class="experience-card">
+        <div class="experience-card-main">
+            <div class="company-head">
+
+                <span class="company-logo university">
+                    <img
+                        src="assets/img/logo/dhmo_logo.png"
+                        alt="Ho Chi Minh City Open University Logo"
+                    />
+                </span>
+
                 <div>
-                    <div class="exp-role">Product Owner Intern</div>
-                    <div class="exp-company">Golden Owl Solutions · 3 SaaS Products · Agile</div>
+                    <h3>Ho Chi Minh City Open University</h3>
+                    <span>Management Information Systems (MIS)</span>
                 </div>
-                <span class="exp-period">~5 Months</span>
-            </div>
-            <div class="exp-bullets">
-                <div class="exp-bullet">Contributed to product development across 3 SaaS products — supporting
-                    requirement gathering, workflow design, and sprint delivery from backlog to release.
-                </div>
-                <div class="exp-bullet">Wrote and refined product documentation: user stories, acceptance criteria,
-                    PRDs, and process flows that kept dev and design aligned.
-                </div>
-                <div class="exp-bullet">Collaborated daily with developers, designers, QA, and stakeholders to clarify
-                    requirements and resolve blockers fast.
-                </div>
-                <div class="exp-bullet">Supported product decisions through user research, competitive analysis,
-                    wireframing (Figma), and data-informed thinking.
-                </div>
-            </div>
-            <div class="exp-tags">
-                <span class="exp-tag">Agile / Scrum</span>
-                <span class="exp-tag">User Stories</span>
-                <span class="exp-tag">Acceptance Criteria</span>
-                <span class="exp-tag">UAT testing</span>
-                <span class="exp-tag">Workflow Design</span>
-                <span class="exp-tag">Wireframing</span>
-                <span class="exp-tag">Jira</span>
-                <span class="exp-tag">Stakeholder Mgmt</span>
-            </div>
-        </div>
-    </div>
-</section>
 
-<div class="divider"></div>
-
-<!-- SKILLS -->
-<section id="skills">
-    <div class="container">
-        <div class="sec-header reveal">
-            <div class="sec-eyebrow">Skills</div>
-            <h2 class="sec-title">CORE<br>COMPETENCIES.</h2>
-        </div>
-
-        <div class="skills-grid reveal">
-            <div class="skill-block">
-                <div class="skill-block-header">
-                    <div class="skill-ico p-cyan"><i class="fa-solid fa-box-open"></i></div>
-                    <div>
-                        <div class="skill-block-title">Product & BA</div>
-                        <div class="skill-block-sub">Requirements · Delivery</div>
-                    </div>
-                </div>
-                <div class="skill-list">
-                    <div class="skill-item-row"><span class="skill-item-name">Agile / Scrum</span>
-                        <div class="skill-dot"></div>
-                    </div>
-                    <div class="skill-item-row"><span class="skill-item-name">User Stories & PRDs</span>
-                        <div class="skill-dot"></div>
-                    </div>
-                    <div class="skill-item-row"><span class="skill-item-name">Requirement Gathering</span>
-                        <div class="skill-dot"></div>
-                    </div>
-                    <div class="skill-item-row"><span class="skill-item-name">Workflow Design</span>
-                        <div class="skill-dot"></div>
-                    </div>
-                    <div class="skill-item-row"><span class="skill-item-name">Wireframing (Figma)</span>
-                        <div class="skill-dot"></div>
-                    </div>
-                    <div class="skill-item-row"><span class="skill-item-name">Stakeholder Communication</span>
-                        <div class="skill-dot"></div>
-                    </div>
-                </div>
+                <span class="tag-label education-tag">University</span>
             </div>
 
-            <div class="skill-block">
-                <div class="skill-block-header">
-                    <div class="skill-ico p-purple"><i class="fa-solid fa-database"></i></div>
-                    <div>
-                        <div class="skill-block-title">Data & Analytics</div>
-                        <div class="skill-block-sub">Insights · Visualization</div>
-                    </div>
-                </div>
-                <div class="skill-list">
-                    <div class="skill-item-row"><span class="skill-item-name">Power BI & DAX</span>
-                        <div class="skill-dot" style="background:var(--accent2)"></div>
-                    </div>
-                    <div class="skill-item-row"><span class="skill-item-name">SQL (MySQL)</span>
-                        <div class="skill-dot" style="background:var(--accent2)"></div>
-                    </div>
-                    <div class="skill-item-row"><span class="skill-item-name">Python & Pandas</span>
-                        <div class="skill-dot" style="background:var(--accent2)"></div>
-                    </div>
-                    <div class="skill-item-row"><span class="skill-item-name">Data Modeling</span>
-                        <div class="skill-dot" style="background:var(--accent2)"></div>
-                    </div>
-                    <div class="skill-item-row"><span class="skill-item-name">Excel</span>
-                        <div class="skill-dot" style="background:var(--accent2)"></div>
-                    </div>
-                </div>
-            </div>
+            <p class="education-description">
+                An academic foundation in business processes, information
+                systems, data analytics, and software project delivery.
+            </p>
 
-            <div class="skill-block">
-                <div class="skill-block-header">
-                    <div class="skill-ico p-green"><i class="fa-solid fa-diagram-project"></i></div>
-                    <div>
-                        <div class="skill-block-title">Systems & Docs</div>
-                        <div class="skill-block-sub">Modeling · Diagrams</div>
-                    </div>
-                </div>
-                <div class="skill-list">
-                    <div class="skill-item-row"><span class="skill-item-name">BPMN / DFD</span>
-                        <div class="skill-dot" style="background:#22c55e"></div>
-                    </div>
-                    <div class="skill-item-row"><span class="skill-item-name">UML</span>
-                        <div class="skill-dot" style="background:#22c55e"></div>
-                    </div>
-                    <div class="skill-item-row"><span class="skill-item-name">ERD</span>
-                        <div class="skill-dot" style="background:#22c55e"></div>
-                    </div>
-                    <div class="skill-item-row"><span class="skill-item-name">Jira</span>
-                        <div class="skill-dot" style="background:#22c55e"></div>
-                    </div>
-                    <div class="skill-item-row"><span class="skill-item-name">Technical Documentation</span>
-                        <div class="skill-dot" style="background:#22c55e"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- PROJECTS -->
-<section class="projects-shell" id="projects">
-    <div class="container">
-        <div class="sec-header reveal">
-            <div class="sec-eyebrow">Projects</div>
-            <h2 class="sec-title">FEATURED<br>WORK.</h2>
-            <p class="sec-sub">Selected projects across data analytics, business analysis, and software systems.</p>
-        </div>
-
-        <div class="filter-bar reveal">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="ba">Business Analysis</button>
-            <button class="filter-btn" data-filter="software">Software & DB</button>
-            <button class="filter-btn" data-filter="bi">Power BI</button>
-            <button class="filter-btn" data-filter="recsys">Recommendation</button>
-        </div>
-
-        <div class="projects-grid" id="projGrid">
-
-            <div class="proj-card reveal" data-category="ba">
-                <div class="proj-img"><img src="assets/img/saco_crm.jpg" alt="SACO Information System">
-                    <div class="proj-img-overlay"></div>
-                </div>
-                <div class="proj-body">
-                    <div class="proj-kicker">MIS · CRM / ERP Assessment</div>
-                    <div class="proj-title">Information System for SACO</div>
-                    <p class="proj-desc">Compared enterprise solutions, analyzed gaps, and proposed a phased roadmap to
-                        improve business operations.</p>
-                    <div class="proj-chips"><span class="chip">Analysis</span><span class="chip">Roadmap</span><span
-                            class="chip">ERP</span></div>
-                    <div class="proj-actions">
-                        <a class="link-btn prim" href="assets/docs/LyBui_SACO.pdf" target="_blank"
-                           rel="noopener"><i class="fa-regular fa-file-lines"></i> Report</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="proj-card reveal" data-category="ba">
-                <div class="proj-img"><img src="assets/img/Management AD.jpg" alt="Classified Ads System">
-                    <div class="proj-img-overlay"></div>
-                </div>
-                <div class="proj-body">
-                    <div class="proj-kicker">Systems Design & Analysis</div>
-                    <div class="proj-title">Classified Ads Management System</div>
-                    <p class="proj-desc">Designed system requirements, workflows, and database structure for an
-                        advertising management platform.</p>
-                    <div class="proj-chips"><span class="chip">Use Case</span><span class="chip">DFD</span><span
-                            class="chip">ERD</span></div>
-                    <div class="proj-actions">
-                        <a class="link-btn prim" href="assets/docs/LyBui_PTTKHT.pdf" target="_blank"
-                           rel="noopener"><i class="fa-regular fa-file-lines"></i> Report</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="proj-card reveal" data-category="ba">
-                <div class="proj-img"><img src="assets/img/SAP CRM System Analysis.jpg" alt="SAP CRM Analysis">
-                    <div class="proj-img-overlay"></div>
-                </div>
-                <div class="proj-body">
-                    <div class="proj-kicker">Business Analysis · CRM</div>
-                    <div class="proj-title">SAP CRM System Analysis</div>
-                    <p class="proj-desc">Studied CRM capabilities, compared alternatives, and proposed improvements for
-                        customer and business operations.</p>
-                    <div class="proj-chips"><span class="chip">BA</span><span class="chip">SAP</span><span class="chip">CRM</span>
-                    </div>
-                    <div class="proj-actions">
-                        <a class="link-btn prim" href="assets/docs/HTTTQL_CRM_SAP.pdf" target="_blank"
-                           rel="noopener"><i class="fa-regular fa-file-lines"></i> Report</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="proj-card reveal" data-category="software">
-                <div class="proj-img"><img src="assets/img/ordering food web.jpg" alt="Food Ordering Web">
-                    <div class="proj-img-overlay"></div>
-                </div>
-                <div class="proj-body">
-                    <div class="proj-kicker">Software & Database</div>
-                    <div class="proj-title">Ordering Food Web</div>
-                    <p class="proj-desc">Web-based food ordering system with browsing, cart, payment flow, and admin
-                        management.</p>
-                    <div class="proj-chips"><span class="chip">Flask</span><span class="chip">MySQL</span><span
-                            class="chip">Jira</span></div>
-                    <div class="proj-actions">
-                        <a class="link-btn prim" href="https://github.com/chivtn/Ordering_Food_App" target="_blank"
-                           rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
-                        <a class="link-btn ghost-btn" href="assets/docs/Ordering Food Web - Report.pdf" target="_blank"
-                           rel="noopener"><i class="fa-regular fa-file-lines"></i> Report</a>
-                        <!--                        <a class="link-btn prim" href="https://huyvotan.pythonanywhere.com" target="_blank"-->
-                        <!--                           rel="noopener"><i class="fa-solid fa-globe"></i> Live</a>-->
-                    </div>
-                </div>
-            </div>
-
-            <div class="proj-card reveal" data-category="software">
-                <div class="proj-img"><img src="assets/img/dormitory_management_system.jpg" alt="Dormitory Management">
-                    <div class="proj-img-overlay"></div>
-                </div>
-                <div class="proj-body">
-                    <div class="proj-kicker">Software & Database</div>
-                    <div class="proj-title">Dormitory Management System</div>
-                    <p class="proj-desc">Analyzed business processes and designed a 3-tier prototype supporting room
-                        assignment and billing logic.</p>
-                    <div class="proj-chips"><span class="chip">MySQL</span><span class="chip">DFD/ERD</span><span
-                            class="chip">3-Tier</span></div>
-                    <div class="proj-actions">
-                        <a class="link-btn prim" href="https://github.com/lybuida/Dormitory_Management_System"
-                           target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
-                        <a class="link-btn ghost-btn" href="assets/docs/Báo cáo QuanLyKyTucXa.pdf" target="_blank"
-                           rel="noopener"><i class="fa-regular fa-file-lines"></i> Report</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="proj-card reveal" data-category="software">
-                <div class="proj-img"><img src="assets/img/Student Management System.jpg" alt="Student Management">
-                    <div class="proj-img-overlay"></div>
-                </div>
-                <div class="proj-body">
-                    <div class="proj-kicker">Software & Database</div>
-                    <div class="proj-title">Student Management System</div>
-                    <p class="proj-desc">Multi-role system with UML models, relational schema, and structured academic
-                        workflows.</p>
-                    <div class="proj-chips"><span class="chip">UML</span><span class="chip">MySQL</span><span
-                            class="chip">Flask</span></div>
-                    <div class="proj-actions">
-                        <a class="link-btn prim" href="https://github.com/lybuida/Student_Management_System"
-                           target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
-                        <a class="link-btn ghost-btn" href="assets/docs/Bao-cao-CNPM.pdf" target="_blank"
-                           rel="noopener"><i class="fa-regular fa-file-lines"></i> Report</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="proj-card reveal" data-category="bi">
-                <div class="proj-img"><img src="assets/img/Logistics.jpg" alt="Supply Chain Analytics">
-                    <div class="proj-img-overlay"></div>
-                </div>
-                <div class="proj-body">
-                    <div class="proj-kicker">Power BI · Logistics</div>
-                    <div class="proj-title">Supply Chain Analytics Dashboard</div>
-                    <p class="proj-desc">Dashboard highlighting delivery performance, returns, and loss drivers to
-                        surface operational bottlenecks.</p>
-                    <div class="proj-chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span
-                            class="chip">Logistics</span></div>
-                    <div class="proj-actions">
-                        <a class="link-btn prim"
-                           href="https://app.powerbi.com/view?r=eyJrIjoiOTMzMWEwN2UtOWZkNC00NzY5LTgxZjQtNTEzMmI3ZmIyYmM3IiwidCI6ImJlODMyOWE3LTcyMTgtNDlhMy05YWMxLWQ3Yjk1NDU2M2YzOSIsImMiOjEwfQ%3D%3D"
-                           target="_blank" rel="noopener"><i class="fa-solid fa-up-right-from-square"></i> Live</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="proj-card reveal" data-category="bi">
-                <div class="proj-img">
-                    <img src="assets/img/Capstone 2_BuiDaLy_page-0001.jpg" alt="Product Analytics - E Wallet">
-                    <div class="proj-img-overlay"></div>
-                </div>
-
-                <div class="proj-body">
-                    <div class="proj-kicker">Power BI · Product Analytics</div>
-                    <div class="proj-title">E-Wallet - Product Analytics</div>
-                    <p class="proj-desc">Product analytics project analyzing the drop in bill payment success rate using
-                        funnel analysis, error mapping, and user segmentation to identify root causes.</p>
-
-                    <div class="proj-chips">
-                        <span class="chip">Power BI</span>
-                        <span class="chip">DAX</span>
-                        <span class="chip">Funnel Analysis</span>
-                        <span class="chip">Product Analytics</span>
-                    </div>
-
-                    <div class="proj-actions">
-                        <a class="link-btn prim"
-                           href="assets/docs/Capstone 2_BuiDaLy.pdf"
-                           target="_blank" rel="noopener">
-                            <i class="fa-solid fa-up-right-from-square"></i> Report
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="proj-card reveal" data-category="bi">
-                <div class="proj-img"><img src="assets/img/Ly Da Bui - sale performance.jpg"
-                                           alt="Sales Performance Dashboard">
-                    <div class="proj-img-overlay"></div>
-                </div>
-                <div class="proj-body">
-                    <div class="proj-kicker">Power BI · Dashboard</div>
-                    <div class="proj-title">Sales Performance Dashboard</div>
-                    <p class="proj-desc">Executive dashboard analyzing revenue, margin, and product-channel performance
-                        with DAX and star schema modeling.</p>
-                    <div class="proj-chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span
-                            class="chip">Star Schema</span></div>
-                    <div class="proj-actions">
-                        <a class="link-btn prim"
-                           href="https://app.powerbi.com/view?r=eyJrIjoiZGEzZDg1ZGEtZTI1ZC00OTdiLTg2NjYtYTExODBjYjhhYWJhIiwidCI6ImJlODMyOWE3LTcyMTgtNDlhMy05YWMxLWQ3Yjk1NDU2M2YzOSIsImMiOjEwfQ%3D%3D"
-                           target="_blank" rel="noopener"><i class="fa-solid fa-up-right-from-square"></i> Live</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="proj-card reveal" data-category="recsys">
-                <div class="proj-img"><img src="assets/img/movie recommendation system.jpg"
-                                           alt="Movie Recommendation System">
-                    <div class="proj-img-overlay"></div>
-                </div>
-                <div class="proj-body">
-                    <div class="proj-kicker">Python · Recommendation</div>
-                    <div class="proj-title">Movie Recommendation System</div>
-                    <p class="proj-desc">Built recommendation models on MovieLens data and compared collaborative
-                        filtering approaches using RMSE.</p>
-                    <div class="proj-chips"><span class="chip">Python</span><span class="chip">Pandas</span><span
-                            class="chip">CF</span></div>
-                    <div class="proj-actions">
-                        <a class="link-btn prim" href="https://github.com/lybuida/Movie_Recommendation_System"
-                           target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
-                        <a class="link-btn ghost-btn" href="assets/docs/Movie_Recommendation_System.pdf" target="_blank"
-                           rel="noopener"><i class="fa-regular fa-file-lines"></i> Report</a>
-                        <a class="link-btn ghost-btn" href="assets/docs/Movie_Recommendation_System_slide.pdf"
-                           target="_blank"
-                           rel="noopener"><i class="fa-regular fa-file-lines"></i> Slides</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="proj-card reveal" data-category="recsys">
-                <div class="proj-img"><img src="assets/img/Product Recommendation.jpg" alt="Product Recommendation">
-                    <div class="proj-img-overlay"></div>
-                </div>
-                <div class="proj-body">
-                    <div class="proj-kicker">Python · Big Data</div>
-                    <div class="proj-title">Product Recommendation (E-commerce)</div>
-                    <p class="proj-desc">Recommendation logic and evaluation pipeline, comparing ranking metrics and
-                        outlining A/B testing direction.</p>
-                    <div class="proj-chips"><span class="chip">Python</span><span class="chip">Similarity</span><span
-                            class="chip">Metrics</span></div>
-                    <div class="proj-actions">
-                        <a class="link-btn prim"
-                           href="https://github.com/lybuida/Product_Recommendation_E-commerce" target="_blank"
-                           rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
-                        <a class="link-btn ghost-btn"
-                           href="assets/docs/OU_DB2_Group 3_Final Report.pdf"
-                           target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> Report</a>
-                        <a class="link-btn ghost-btn"
-                           href="assets/docs/OU_DB2_Group 3_Presentation-Slide.pdf"
-                           target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> Slides</a>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- CONTACT -->
-<section id="contact">
-    <div class="container">
-        <div class="sec-header reveal">
-            <div class="sec-eyebrow">Contact</div>
-            <h2 class="sec-title">LET'S<br>CONNECT.</h2>
-            <p class="sec-sub">Open to Product, Business Analysis, and Data roles. Based in Ho Chi Minh City.</p>
-        </div>
-
-        <div class="contact-grid reveal">
-            <a class="contact-block" href="mailto:lybui.lbb@gmail.com">
-                <i class="contact-icon ci-email fa-regular fa-envelope"></i>
+            <div class="education-facts">
                 <div>
-                    <div class="contact-label">Email</div>
-                    <div class="contact-val">lybui.lbb@gmail.com</div>
+                    <strong>3.5<span>/4.0</span></strong>
+                    <small>GPA</small>
                 </div>
-            </a>
-            <a class="contact-block" href="https://www.linkedin.com/in/lybuida/" target="_blank" rel="noopener">
-                <i class="contact-icon ci-linkedin fa-brands fa-linkedin"></i>
                 <div>
-                    <div class="contact-label">LinkedIn</div>
-                    <div class="contact-val">linkedin.com/in/lybuida</div>
+                    <strong>6</strong>
+                    <small>Scholarships</small>
                 </div>
-            </a>
-            <a class="contact-block" href="https://github.com/lybuida" target="_blank" rel="noopener">
-                <i class="contact-icon ci-github fa-brands fa-github"></i>
                 <div>
-                    <div class="contact-label">GitHub</div>
-                    <div class="contact-val">github.com/lybuida</div>
+                    <strong>10+</strong>
+                    <small>Academic Projects</small>
                 </div>
-            </a>
+            </div>
+        </div>
+    </div>
+</article>
+            </div>
+        </div>
+    </section>
+    <section class="skills layout-section" id="skills">
+        <div class="layout-container skills-layout">
+            <div class="section-intro skills-intro">
+                <div class="section-label"><span class="tiny-circle"></span>SKILLS <span class="rule"></span></div>
+                <h2>Skills &amp;<br/><span class="gradient-text">Expertise</span></h2>
+                <p class="muted">Learn fast. Adapt quickly. Work smart.</p>
+            </div>
+            <div class="skills-content">
+                <div class="skills-cards">
+                    <article class="skill-card skill-card-pm">
+                        <div class="skill-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <h3>Project Management</h3>
+                        <ul>
+                            <li>Agile / Scrum Methodologies</li>
+                            <li>Project Planning &amp; Milestone Tracking</li>
+                            <li>Risk &amp; Issue Management</li>
+                            <li>Stakeholder Coordination</li>
+                            <li>UAT, Testing &amp; Handover</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card skill-card-ba">
+                        <div class="skill-icon"><i class="fa-solid fa-file-lines"></i></div>
+                        <h3>Business Analysis</h3>
+                        <ul>
+                            <li>Requirements Gathering</li>
+                            <li>User Stories &amp; Acceptance Criteria</li>
+                            <li>Process Mapping &amp; System Design</li>
+                            <li>Product Documentation</li>
+                            <li>Solution Discovery &amp; Improvement</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card skill-card-data">
+                        <div class="skill-icon"><i class="fa-solid fa-chart-simple"></i></div>
+                        <h3>Data &amp; Technology</h3>
+                        <ul>
+                            <li>SQL &amp; Data Analysis</li>
+                            <li>Power BI &amp; Data Visualization</li>
+                            <li>Python (Data Analysis, AI)</li>
+                            <li>Database Design</li>
+                            <li>AI / Automation Fundamentals</li>
+                            <li>API &amp; SDLC Understanding</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="skill-tools">
+                    <div class="tools-heading">
+                        <div class="section-label">TOOLS <span class="rule"></span></div>
+                        <h3>Tools<br/>I Work With</h3></div>
+                    <div class="tools-list">
+                        <div class="tool-tile"><img alt="Jira logo" loading="lazy" src="assets/img/logo/jira.png"
+                                                    class="tool-logo-img"/><span>Jira</span></div>
+                        <div class="tool-tile"><img alt="Microsoft Project logo" loading="lazy"
+                                                    src="assets/img/logo/microsoft_project.webp" class="tool-logo-img"/><span>Microsoft<br/>Project</span>
+                        </div>
+                        <div class="tool-tile"><img alt="Figma logo" loading="lazy" src="assets/img/logo/figma.webp"
+                                                    class="tool-logo-img"/><span>Figma</span></div>
+                        <div class="tool-tile"><img alt="Draw.io logo" loading="lazy" src="assets/img/logo/drawio.webp"
+                                                    class="drawio-logo"/><span>Draw.io</span></div>
+                        <div class="tool-tile"><i class="fa-brands fa-github"
+                                                  style="color:#111827"></i><span>GitHub</span></div>
+                        <div class="tool-tile"><img alt="Excel logo" loading="lazy" src="assets/img/logo/excel.png"
+                                                    class="tool-logo-img"/><span>Excel</span></div>
+                        <div class="tool-tile"><img alt="Power BI logo" loading="lazy"
+                                                    src="assets/img/logo/powerbi.webp" class="tool-logo-img"/><span>Power BI</span>
+                        </div>
+                        <div class="tool-tile"><img alt="Python logo" loading="lazy" src="assets/img/logo/python.webp"
+                                                    class="tool-logo-img"/><span>Python</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects layout-section" id="projects">
+        <div class="layout-container project-layout">
+            <div class="section-intro">
+                <div class="section-label"><span class="tiny-circle"></span> PROJECTS <span class="rule"></span></div>
+                <h2>Ideas<br/>in <span class="gradient-text">Action</span></h2>
+                <p class="muted">Selected work in digital solutions, product analysis, software systems, and AI.</p>
+            </div>
+            <div class="project-panel">
+                <div class="project-toolbar">
+                    <div aria-label="Filter projects" class="filter-bar" role="group">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="ai">AI Recommendation</button>
+                        <button class="filter-btn" data-filter="ba">Business Analysis</button>
+                        <button class="filter-btn" data-filter="software">Web / System</button>
+                        <button class="filter-btn" data-filter="bi">Data</button>
+                    </div>
+                    <div class="display-switch">
+                        <button aria-label="Grid view" class="active" id="gridView"><i
+                                class="fa-solid fa-border-all"></i></button>
+                        <button aria-label="List view" id="listView"><i class="fa-solid fa-list"></i></button>
+                    </div>
+                </div>
+                <div class="projects-grid" id="project-results"></div>
+            </div>
+        </div>
+    </section>
+
+<section class="contact layout-section" id="contact">
+    <div class="layout-container contact-redesign">
+        <div class="contact-main">
+            <div class="contact-copy">
+                <h2>
+                    Have a challenge?<br/>
+                    <span class="gradient-text">Let's solve it together.</span>
+                </h2>
+                <p>
+                    I'm interested in conversations about digital transformation,
+                    AI-driven solutions, product ideas, and improving how businesses work.
+                </p>
+            </div>
+
+            <div class="contact-action">
+                <a class="contact-email" href="mailto:lybui.lbb@gmail.com">
+                    <span class="contact-mail-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </span>
+                    <span>
+                        <small>START A CONVERSATION</small>
+                        <strong>lybui.lbb@gmail.com</strong>
+                    </span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                <div class="contact-socials">
+                    <a href="https://www.linkedin.com/in/lybuida/"
+                       rel="noopener noreferrer" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                    <a href="https://github.com/lybuida"
+                       rel="noopener noreferrer" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
+</main>
 <footer>
-    <div class="container">
-        <p>© <span id="yr"></span> <span>Ly Da Bui</span> · Product · Business Analysis · Data</p>
+    <div class="layout-container footer-inner"><span>© <span
+            id="yr"></span> Bui Da Ly. All rights reserved.</span><span>AI · Digital Solutions · Business Transformation</span><span>Designed &amp; Built with ♡</span>
     </div>
 </footer>
 <script src="script.js"></script>
